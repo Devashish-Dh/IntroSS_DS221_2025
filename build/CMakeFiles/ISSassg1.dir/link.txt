@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ISSassg1.dir/main.cpp.o -o ISSassg1 
