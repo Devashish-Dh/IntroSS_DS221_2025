@@ -1,3 +1,0 @@
-/home/ved/Desktop/cds ISS assignments/IntroSS_DS221_2025/build/CMakeFiles/ISSassg1.dir
-/home/ved/Desktop/cds ISS assignments/IntroSS_DS221_2025/build/CMakeFiles/edit_cache.dir
-/home/ved/Desktop/cds ISS assignments/IntroSS_DS221_2025/build/CMakeFiles/rebuild_cache.dir
