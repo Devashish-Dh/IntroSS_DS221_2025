@@ -16,8 +16,8 @@
 #include <queue>
 #include <unordered_set>
 #include <set>
-
-
+#include <fstream>
+#include <string>
 
 
 using namespace std;
@@ -62,22 +62,14 @@ vector<vector<int>> sortByParcelId(const vector<vector<int>>& input_parcels) {
     return sorted_parcels;
 }
 
-vector<vector<int>> question_one(const vector<vector<int>>& parcels) {
-    // TODO: Implement function
-    // parcels[i][0] is id of parcel i
-    // parcels[i][1] is weight of parcel i
-    // id might be repeated for different parcels
-
-    //using unordered_map to store min weights and counts of each id
+//function that solves the problem
+vector<vector<int>> sol(const vector<vector<int>>& parcels) {
     unordered_map<int, int> min_weights;
     unordered_map<int, int> counts;
-    int id, weight;
 
-    vector<vector<int>> generatedParcels = generateData(100, 500, 1000);
-
-    // iterate through parcels to populate the maps with min weights and counts
-    for (const auto& parcel : generatedParcels) {
-        id = parcel[0], weight = parcel[1];
+    // Count occurrences and track min weights
+    for (const auto& parcel : parcels) {
+        int id = parcel[0], weight = parcel[1];
         counts[id]++;
         if (min_weights.count(id)) {
             min_weights[id] = min(min_weights[id], weight);
@@ -86,28 +78,109 @@ vector<vector<int>> question_one(const vector<vector<int>>& parcels) {
         }
     }
 
-    //initialize result vector
-    vector<vector<int>> result;
+    // Debugging: print counts and min weights
+    /*
+    cout << "Counts and Min Weights:\n";
+    for (auto& [id, cnt] : counts) {
+        cout << "Id " << id << " Count " << cnt 
+             << " MinWeight " << min_weights[id] << endl;
+    }
+    cout << endl;
+    */
 
-    // iterate through min_weights to find duplicates and populate result
+    vector<vector<int>> result;
     for (const auto& [id, min_weight] : min_weights) {
         if (counts[id] > 1) {
             result.push_back({id, min_weight});
         }
     }
 
-    //sort result by id before returning
+    // Debugging: print unsorted result
+    /*
+    cout << "Unsorted Result:\n";
+    for (auto& parcel : result) {
+        cout << "Id " << parcel[0] << " MinWeight " << parcel[1] << endl;
+    }
+    cout << endl;
+    */
+
     result = sortByParcelId(result);
 
-    // // print out result
-    // cout<<"Duplicate Parcels with Minimum Weight: "<<endl;
-    // for(auto parcel : result) {
-    //     cout <<"Id " << parcel[0] << " Min Weight " << parcel[1] << endl;
-    // }   
-    // cout<<endl; 
+    // Debugging: print final sorted result
+    /*
+    cout << "Sorted Result:\n";
+    for (auto& parcel : result) {
+        cout << "Id " << parcel[0] << " MinWeight " << parcel[1] << endl;
+    }
+    cout << endl;
+    */
+
+    return result;
+}
+
+vector<vector<int>> testing() {
+    srand(42); // fixed seed for reproducibility
+
+    //parameters for generating random data
+    int rangeOfId = 100000000;        // IDs from 1 to rangeOfId
+    int rangeOfWeight = 100000000;    // Weights from 1 to rangeOfWeight
+    int numberOfParcelsWanted = 10;   // total parcels to generate
+
+    // Generate test data
+    vector<vector<int>> generatedParcels = generateData(rangeOfId, rangeOfWeight, numberOfParcelsWanted);
+
+    //print parameters used for generating data
+    cout << "Parameters for Data Generation:\n";
+    cout << "Range of IDs: 1 to " << rangeOfId << endl;
+    cout << "Range of Weights: 1 to " << rangeOfWeight << endl;
+    cout << "Number of Parcels Generated: " << numberOfParcelsWanted << endl << endl;
+
+    // cout << "Generated Parcels:\n";
+    // for (auto& parcel : generatedParcels) {
+    //     cout << "Id " << parcel[0] << " Weight " << parcel[1] << endl;
+    // }
+    // cout << endl;
 
 
-    return result;  
+    auto start = std::chrono::high_resolution_clock::now();
+
+    // Run and time the solution
+    vector<vector<int>> result = sol(generatedParcels);
+
+    auto stop = std::chrono::high_resolution_clock::now();
+
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+
+    cout << "Time taken by q1 sol(): " << duration.count() << " microseconds" << endl;
+
+    // cout << "Duplicate Parcels with Minimum Weight:\n";
+    // for (auto& parcel : result) {
+    //     cout << "Id " << parcel[0] << " MinWeight " << parcel[1] << endl;
+    // }
+    // cout << endl;
+
+    return result; 
+}
+
+
+
+
+
+
+vector<vector<int>> question_one(const vector<vector<int>>& parcels) {
+    // TODO: Implement function
+    // parcels[i][0] is id of parcel i
+    // parcels[i][1] is weight of parcel i
+    // id might be repeated for different parcels
+
+    //testing code
+    //vector<vector<int>> testResult = testing();
+    //return testResult;
+
+    //std::cout << "\n----Q1 completed----\n" << std::endl;
+
+    //actual code starts here, remember to comment out the testing code above before submission
+    return sol(parcels);
 }
 
 
@@ -158,11 +231,11 @@ TreeNode* buildTreeHelper(const vector<int>& preorder, int preStart, int preEnd,
 //wrapper function to initiate tree building
 TreeNode* buildTree(const vector<int>& preorder, const vector<int>& inorder) {
     unordered_map<int, int> inorderIndexMap;
-    for (int i = 0; i < inorder.size(); ++i) {
+    for (int i = 0; i < (int)inorder.size(); ++i) {
         inorderIndexMap[inorder[i]] = i;
     }
-    return buildTreeHelper(preorder, 0, preorder.size() - 1,
-                           inorder, 0, inorder.size() - 1, inorderIndexMap);
+    return buildTreeHelper(preorder, 0, (int)preorder.size() - 1,
+                           inorder, 0, (int)inorder.size() - 1, inorderIndexMap);
 }
 
 //recursive function for level order traversal of tree 
@@ -196,42 +269,40 @@ void getLeafNodes(TreeNode* root, vector<int>& leafNodes) {
 
 
 //dfs to setup depth and up tables for LCA using Binary Lifting
-void dfs(TreeNode* node, TreeNode* parent, vector<int>& depth, vector<vector<int>>& up, int LOG) {
+void dfs_binary_lifting(TreeNode* node, TreeNode* parent,
+                        const unordered_map<int,int>& valToIdx,
+                        vector<int>& depth, vector<vector<int>>& up, int LOG) {
     if (!node) return;
-    int nodeVal = node->val;
-    int parentVal = parent ? parent->val : -1;
-    up[nodeVal][0] = parentVal;
+    int idx = valToIdx.at(node->val);
+    int parentIdx = parent ? valToIdx.at(parent->val) : -1;
+    up[idx][0] = parentIdx;
     for (int j = 1; j < LOG; ++j) {
-        if (up[nodeVal][j - 1] != -1) {
-            up[nodeVal][j] = up[up[nodeVal][j - 1]][j - 1];
-        }
+        if (up[idx][j-1] != -1) up[idx][j] = up[ up[idx][j-1] ][j-1];
+        else up[idx][j] = -1;
     }
-    if (parent) {
-        depth[nodeVal] = depth[parentVal] + 1;
-    }
-    dfs(node->left, node, depth, up, LOG);
-    dfs(node->right, node, depth, up, LOG);
-}   
+    if (parent) depth[idx] = depth[parentIdx] + 1;
+    dfs_binary_lifting(node->left, node, valToIdx, depth, up, LOG);
+    dfs_binary_lifting(node->right, node, valToIdx, depth, up, LOG);
+}
 
-//function to get LCA of two nodes u and v
-int getLCA(int u, int v, const vector<int>& depth, const vector<vector<int>>& up, int LOG) {
-    if (depth[u] < depth[v]) swap(u, v);
-    int diff = depth[u] - depth[v];
+// get LCA between two node-indices (compact) using up/depth
+int getLCA_idx(int u, int v, const vector<int>& depth, const vector<vector<int>>& up, int LOG) {
+    if (u == -1 || v == -1) return -1;
+    int uu = u, vv = v;
+    if (depth[uu] < depth[vv]) swap(uu, vv);
+    int diff = depth[uu] - depth[vv];
     for (int j = 0; j < LOG; ++j) {
-        if ((diff >> j) & 1) {
-            u = up[u][j];
-        }
+        if ((diff >> j) & 1) uu = up[uu][j];
     }
-    if (u == v) return u;
+    if (uu == vv) return uu;
     for (int j = LOG - 1; j >= 0; --j) {
-        if (up[u][j] != up[v][j]) {
-            u = up[u][j];
-            v = up[v][j];
+        if (up[uu][j] != up[vv][j]) {
+            uu = up[uu][j];
+            vv = up[vv][j];
         }
     }
-    return up[u][0];
-}   
-
+    return up[uu][0];
+}
 
 // helper function: recursive
 void buildPreorder(const vector<int>& inorder, int l, int r, 
@@ -306,7 +377,7 @@ std::tuple< vector<int>, vector<int>, unordered_map<int, vector<int>>, vector<ve
         int k = rand() % 100 + 1; //random k from 1 to 100
         //generate k unique parcel ids for this leaf node
         vector<int> parcels;
-        while (parcels.size() < k) {
+        while ((int)parcels.size() < k) {
             int parcelId = rand() % parcelIdLimit + 1; //random id from 1 to parcelIdLimit
             if (!usedParcelIds[parcelId]) {
                 parcels.push_back(parcelId);
@@ -328,7 +399,7 @@ std::tuple< vector<int>, vector<int>, unordered_map<int, vector<int>>, vector<ve
     // cout<<endl;
 
     //generate some random queries (each query is a list of parcel ids from usedParcelIds)
-    int numQueries = 10; //arbitrary choice of number of queries
+    int numQueries = 100000; //arbitrary choice of number of queries
     vector<int> usedParcelIdList;
     for (const auto& [parcelId, used] : usedParcelIds) {
         if (used) {
@@ -362,222 +433,321 @@ std::tuple< vector<int>, vector<int>, unordered_map<int, vector<int>>, vector<ve
     return std::make_tuple(preorder, inorder, leafParcelMap, queries);
 }
 
+
+
+//__________________________________
+// preorder, inorder: traversals of the tree
+// leafParcels: vector where leafParcels[i] are parcel ids assigned to the i-th leaf in level-order (wrapper will align them)
+// query: vector of queries; each query is a vector of parcel ids
+vector<int> sol(
+    const vector<int>& preorder,
+    const vector<int>& inorder,
+    const vector<vector<int>>& leafParcels,
+    const vector<vector<int>>& query
+) {
+    // Build the tree
+    TreeNode* root = buildTree(preorder, inorder);
+
+    // Get leaf nodes in left-to-right order
+    vector<int> leafNodes;
+    getLeafNodes(root, leafNodes);
+
+    // Map each parcel to its leaf node
+    unordered_map<int, int> parcelToLeaf; // parcelID -> leaf node value
+    for (int i = 0; i < (int)leafNodes.size() && i < (int)leafParcels.size(); ++i) {
+        for (int parcel : leafParcels[i])
+            parcelToLeaf[parcel] = leafNodes[i];
+    }
+
+    // Build node value → index mapping for binary lifting
+    unordered_map<int,int> valToIdx;
+    vector<TreeNode*> stack = {root};
+    int idx = 0;
+    while (!stack.empty()) {
+        TreeNode* node = stack.back(); stack.pop_back();
+        if (!valToIdx.count(node->val)) valToIdx[node->val] = idx++;
+        if (node->right) stack.push_back(node->right);
+        if (node->left) stack.push_back(node->left);
+    }
+
+    int N = (int)valToIdx.size();
+    const int LOG = 21;
+    vector<int> depth(N, 0);
+    vector<vector<int>> up(N, vector<int>(LOG, -1));
+
+    // DFS to populate depth and up tables
+    dfs_binary_lifting(root, nullptr, valToIdx, depth, up, LOG);
+
+    // Answer queries
+    vector<int> result;
+    for (const auto& parcelsNeeded : query) {
+        vector<int> leaves; // leaf node values
+        for (int parcel : parcelsNeeded) {
+            if (parcelToLeaf.count(parcel)) leaves.push_back(parcelToLeaf[parcel]);
+        }
+
+        if (leaves.empty()) {
+            result.push_back(-1); // no parcels found
+        } else if (leaves.size() == 1) {
+            result.push_back(leaves[0]);
+        } else {
+            // Compute LCA index
+            int lca_idx = valToIdx[leaves[0]];
+            for (size_t i = 1; i < leaves.size(); ++i)
+                lca_idx = getLCA_idx(lca_idx, valToIdx[leaves[i]], depth, up, LOG);
+
+            // Convert back to node value
+            int lca_val = -1;
+            for (auto &[v,i] : valToIdx) if (i == lca_idx) { lca_val = v; break; }
+            result.push_back(lca_val);
+        }
+    }
+
+    return result;
+}
+
+//__________________________________
+
+//code to generate random input for question two
+//Generate random binary tree and its traversals
+std::tuple<vector<int>, vector<int>, TreeNode*> generateTree(int numNodes) {
+    // inorder = shuffled 1..numNodes
+    vector<int> inorder(numNodes);
+    iota(inorder.begin(), inorder.end(), 1);
+
+    std::random_device rd;
+    std::mt19937 g(rd());
+    shuffle(inorder.begin(), inorder.end(), g);
+
+    // preorder generated randomly
+    vector<int> preorder = generateRandomPreorder(inorder);
+
+    // build tree
+    TreeNode* root = buildTree(preorder, inorder);
+
+    return {preorder, inorder, root};
+}
+
+//Assign parcels to leaf nodes
+unordered_map<int, vector<int>> assignParcels(TreeNode* root) {
+    vector<int> leafNodes;
+    getLeafNodes(root, leafNodes);
+
+    unordered_map<int, vector<int>> leafParcelMap;
+    unordered_map<int, bool> usedParcelIds;
+
+    int parcelIdLimit = (int)leafNodes.size() * 100; // enough unique IDs
+
+    for (int leaf : leafNodes) {
+        int k = rand() % 100 + 1; // 1–100 parcels
+        vector<int> parcels;
+
+        while ((int)parcels.size() < k) {
+            int parcelId = rand() % parcelIdLimit + 1;
+            if (!usedParcelIds[parcelId]) {
+                parcels.push_back(parcelId);
+                usedParcelIds[parcelId] = true;
+            }
+        }
+        leafParcelMap[leaf] = parcels;
+    }
+
+    return leafParcelMap;
+}
+
+//Generate queries
+vector<vector<int>> generateQueries(const unordered_map<int, vector<int>>& leafParcelMap, int numQueries) {
+    vector<int> allParcels;
+    for (const auto& [leaf, parcels] : leafParcelMap) {
+        allParcels.insert(allParcels.end(), parcels.begin(), parcels.end());
+    }
+
+    vector<vector<int>> queries;
+    int totalParcels = (int)allParcels.size();
+
+    for (int i = 0; i < numQueries; i++) {
+        int qSize = rand() % 5 + 1; // query size 1–5
+        vector<int> query;
+        for (int j = 0; j < qSize; j++) {
+            int idx = rand() % totalParcels;
+            query.push_back(allParcels[idx]);
+        }
+        queries.push_back(query);
+    }
+
+    return queries;
+}
+
+// Debug: print tree for verification
+void printTree(TreeNode* root) {
+    if (!root) return;
+    cout << "Node " << root->val;
+    if (root->left) cout << ", left -> " << root->left->val;
+    if (root->right) cout << ", right -> " << root->right->val;
+    cout << endl;
+    printTree(root->left);
+    printTree(root->right);
+}
+
+//Full generator wrapper
+std::tuple<vector<int>, vector<int>, unordered_map<int, vector<int>>, vector<vector<int>>>
+generateRandomBinaryTree(int numNodes, int numQueries) {
+    auto [preorder, inorder, root] = generateTree(numNodes);
+    
+    // // Print the tree structure for verification
+    // cout << "Generated Tree Structure:\n";  
+    // printTree(root);
+
+    auto leafParcelMap = assignParcels(root);
+    // //print leaf nodes and their parcels
+    // cout << "Leaf Nodes and their Parcels:\n";
+    // for (const auto& [leaf, parcels] : leafParcelMap) {
+    //     cout << "Leaf Node: " << leaf << ", Parcels: ";
+    //     for (int p : parcels) cout << p << " ";
+    //     cout << endl;
+    // }
+    // cout << endl;
+
+    // //print the leaf nodes
+    // cout << "Leaf Nodes:\n";
+    // for (const auto& [leaf, parcels] : leafParcelMap) {
+    //     cout << "Leaf Node: " << leaf << "\n";
+    // }
+    // cout << endl;
+
+    auto queries = generateQueries(leafParcelMap, numQueries);
+    // //print generated queries
+    // cout << "\nGenerated Queries:\n";
+    // for (const auto& query : queries) {
+    //     for (int q : query) cout << q << " ";
+    //     cout << endl;
+    // }
+
+    return {preorder, inorder, leafParcelMap, queries};
+}
+
+
+// Helper to print leaf nodes, their parcels, queries, and LCA results
+void printQueryDebug(
+    const vector<int>& leafNodes, 
+    const vector<vector<int>>& leafParcels, 
+    const vector<vector<int>>& queries,
+    const vector<int>& results
+) {
+    cout << "\nQueries and their LCA Results:\n";
+    for (size_t i = 0; i < queries.size(); ++i) {
+        cout << "Query " << i+1 << " parcels: ";
+        for (int p : queries[i])
+            cout << p << " ";
+        
+        // show the leaf nodes containing these parcels
+        cout << " -> Leaf nodes: ";
+        for (int p : queries[i]) {
+            for (size_t j = 0; j < leafNodes.size(); ++j) {
+                if (find(leafParcels[j].begin(), leafParcels[j].end(), p) != leafParcels[j].end()) {
+                    cout << leafNodes[j] << " ";
+                    break; // only first matching leaf
+                }
+            }
+        }
+
+        cout << " -> LCA: " << results[i] << endl;
+    }
+    cout << endl;
+}
+
+
+
+//function to test the solution
+vector<int> testing(int numNodes, int numQueries) {
+    cout << "q2 Generating random binary tree with " << numNodes 
+         << " nodes and " << numQueries << " queries..." << endl;
+
+    // Generate random tree + parcels + queries
+    auto [preorder, inorder, leafParcelMap, queries] = generateRandomBinaryTree(numNodes, numQueries);
+
+    // Convert leafParcelMap to vector<vector<int>> in left-to-right order of leaves
+    vector<int> leafNodes;
+    getLeafNodes(buildTree(preorder, inorder), leafNodes);
+
+    vector<vector<int>> leafParcels;
+    for (int leaf : leafNodes) {
+        if (leafParcelMap.count(leaf)) leafParcels.push_back(leafParcelMap[leaf]);
+        else leafParcels.push_back({});
+    }
+
+
+    // Time the sol() call
+    auto start = std::chrono::high_resolution_clock::now();
+    vector<int> result = sol(preorder, inorder, leafParcels, queries);
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    cout << "Execution Time on of q2_sol() on generated inputs: " << duration.count() << " µs\n";
+
+    // // Optional debug print
+    // cout << "Query results (LCA node values):\n";
+    // for (size_t i = 0; i < result.size(); ++i) {
+    //     cout << "Query " << i+1 << ": " << result[i] << "\n";
+    // }
+    // cout << endl;
+
+    // Print detailed debug info
+    //printQueryDebug(leafNodes, leafParcels, queries, result);
+
+    return result;
+}
+
+
+
+
+
+
+
+
+
+
 vector<int> question_two(
     const vector<int>& preorder,
     const vector<int>& inorder,
     const vector<vector<int>>& leafParcels,
     const vector<vector<int>>& query
-    ) {
-    // TODO: Implement function
+) {
+    //TODO: Implement function
 
-    //generate data for testing
-    const int numNodes = 5; //number of nodes in the tree
+    //std::cout << "\n----Q2 started----\n" << std::endl;
+
+    // Example testing / data generation
+    // const int numNodes = 10; //variable                  1 ≤ n ≤ 10^6 → number of leaf nodes (loading junctions) so max leaves = 2* 10^6
+    // const int numQueries = 100000;
+
+    // vector<int> testResult = testing(numNodes, numQueries);
     
-    //cout to check for segfault
-    //cout<<"Generating Random Binary Tree with "<<numNodes<<" nodes for testing..."<<endl;
-
-    //initialize std::tuple to hold generated data
-    std::tuple< vector<int>, vector<int>, unordered_map<int, vector<int>>, vector<vector<int>> > incomingData;
-
-    incomingData = generateRandomBinaryTree(numNodes);
-
-    //unpack the tuple
-    vector<int> genPreorder = std::get<0>(incomingData);
-    vector<int> genInorder = std::get<1>(incomingData);
-    unordered_map<int, vector<int>> genLeafParcelMap = std::get<2>(incomingData);
-    vector<vector<int>> genQueries = std::get<3>(incomingData); 
-
-    //cout to check for segfault
-    //cout<<"Random Binary Tree Generated."<<endl<<endl;
-
-    //convert map to vector for function input
-    vector<vector<int>> genleafParcels;
-    for (const auto& [leafNode, parcels] : genLeafParcelMap) {
-        genleafParcels.push_back(parcels);
-    }  
-
-    //cout to check for segfault
-    //cout<<"converted map to vector."<<endl<<endl;
-
-    //all testing program here
-
-    //cout to check for segfault
-    //cout<<"Building Tree from Generated Traversals..."<<endl;
-
-    //time this code block
-    using namespace std::chrono;
-    auto start = high_resolution_clock::now();
-
-    TreeNode* testRoot = buildTree(genPreorder, genInorder); //need it
-
-    //cout to check for segfault
-    //cout<<"Tree Built."<<endl<<endl;
-
-
-    vector<int> testLeafNodes;
-    getLeafNodes(testRoot, testLeafNodes);
-    //cout to check for segfault
-    //cout<<"Got Leaf Nodes."<<endl<<endl;
-
-
-    //map genleafParcels[i] to the ith leaf node in level order traversal
-    unordered_map<int, vector<int>> testLeafParcelMap; //map to store leafNode:parcels pairs
-    for (int i = 0; i < testLeafNodes.size() && i < genleafParcels.size(); ++i) {
-        testLeafParcelMap[testLeafNodes[i]] = genleafParcels[i];
-    }       
-    //cout to check for segfault
-    //cout<<"Mapped Leaf Nodes to Parcels."<<endl<<endl;
-
-
-    //setup for LCA (Lowest Common Ancestor) using Binary Lifting
-    //constants for tree size
-    const int TESTMAX_NODES = 2000000;
-    const int TESTLOG = 21; // since 2^21 > 2000000
-    vector<vector<int>> testUp(TESTMAX_NODES, vector<int>(TESTLOG, -1)); // up[v][j] is the 2^j-th ancestor of node v   
-    vector<int> testDepth(TESTMAX_NODES, 0); // depth[v] is the depth of node v
-
-    //run dfs to populate depth and up tables
-    dfs(testRoot, nullptr, testDepth, testUp, TESTLOG);
-
-    //initialize result vector
-    vector<int> testResult;
-
-    //iterate through query 
-    for (const auto& parcelsNeeded : genQueries) {
-        //for query[i], i is a list of parcels
-        //make a vector of leaf nodes that contain these parcels (some parcels may belong to same leaf node)
-        vector<int> testleafNodesWithParcels;
-        for (int parcel : parcelsNeeded) {
-            for (const auto& [leafNode, parcels] : testLeafParcelMap) {
-                if (find(parcels.begin(), parcels.end(), parcel) != parcels.end()) {
-                    testleafNodesWithParcels.push_back(leafNode);
-                    break; //break inner loop to avoid duplicate leaf nodes for same parcel     
-                }
-            }
-        }
-        //run LCA on the vector of leaf nodes to find the common ancestor
-        if (testleafNodesWithParcels.empty()) {
-            testResult.push_back(-1); //if no leaf nodes found for the parcels, return -1
-            continue;}
-        else if (testleafNodesWithParcels.size() == 1) {
-            testResult.push_back(testleafNodesWithParcels[0]); //if only one leaf node found, return that node
-            continue;}
-        else{
-            int lca = testleafNodesWithParcels[0];
-            for (int i = 1; i < testleafNodesWithParcels.size(); ++i) {
-                lca = getLCA(lca, testleafNodesWithParcels[i], testDepth, testUp, TESTLOG);
-            }
-            testResult.push_back(lca); //push the LCA of all leaf nodes found for the parcels   
-        }
-    }
-
-    auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<microseconds>(stop - start);
-    cout << "Time taken for testing code: " << duration.count() << " microseconds" << endl;
-
-
-    //print out result
-    // cout<<"LCA Results for Generated Queries: "<<endl;     
-    // for(int i = 0; i < testResult.size(); ++i) {
-    //     cout <<"Query " << i+1 << " LCA Node " << testResult[i] << endl;
-    // }   
-    // cout<<endl; 
-
-
-
-
+    // std::cout << "\n----Q2 completed----\n" << std::endl;
+    // return testResult;
     
-    // // actual program starts here, remember to comment out the testing code above before submission
 
-    // // given preorder and inorder are the traversals of the binary tree
-    // // create the binary tree from these traversals
-    
-    // TreeNode* root = buildTree(preorder, inorder); 
 
-    // //print the tree level order traversal
-    // // cout<<"Level Order Traversal of the Tree: "<<endl;
-    // // unordered_map<int, int> nodeLevels; //map to store node:level pairs
-    // // levelOrderTraversal(root, nodeLevels);
-    // // for (const auto& [node, level] : nodeLevels) {
-    // //     cout << "Node: " << node << ", Level: " << level << endl;
-    // // }
-    // // cout<<endl;
 
-    // // get the leaf nodes of the tree
-    // vector<int> leafNodes;
-    // getLeafNodes(root, leafNodes);      
+    //vector<int> result = sol(preorder, inorder, leafParcels, query);
 
-    // //map leafParcels[i] to the ith leaf node in level order traversal
-    // unordered_map<int, vector<int>> leafParcelMap; //map to store leafNode:parcels pairs
-    // for (int i = 0; i < leafNodes.size() && i < leafParcels.size(); ++i) {
-    //     leafParcelMap[leafNodes[i]] = leafParcels[i];
-    // }       
-
-    // //print out what parcels are mapped to which leaf nodes
-    // // cout<<"Leaf Nodes and their Parcels: "<<endl;
-    // // for (const auto& [leafNode, parcels] : leafParcelMap) {
-    // //     cout << "Leaf Node: " << leafNode << ", Parcels: ";
-    // //     for (int parcel : parcels) {
-    // //         cout << parcel << " ";
-    // //     }
-    // //     cout << endl;
-    // // }
-    // // cout<<endl;  
-
-    // //setup for LCA (Lowest Common Ancestor) using Binary Lifting
-    // //constants for tree size
-    // const int MAX_NODES = 2000000;
-    // const int LOG = 21; // since 2^21 > 2000000
-    // vector<vector<int>> up(MAX_NODES, vector<int>(LOG, -1)); // up[v][j] is the 2^j-th ancestor of node v
-    // vector<int> depth(MAX_NODES, 0); // depth[v] is the depth of node v
-
-    // //run dfs to populate depth and up tables
-    // dfs(root, nullptr, depth, up, LOG); 
-
-    // //initialize result vector
-    // vector<int> result;
-
-    // //iterate through query 
-    // for (const auto& parcelsNeeded : query) {
-    //     //for query[i], i is a list of parcels
-    //     //make a vector of leaf nodes that contain these parcels (some parcels may belong to same leaf node)
-    //     vector<int> leafNodesWithParcels;
-    //     for (int parcel : parcelsNeeded) {
-    //         for (const auto& [leafNode, parcels] : leafParcelMap) {
-    //             if (find(parcels.begin(), parcels.end(), parcel) != parcels.end()) {
-    //                 leafNodesWithParcels.push_back(leafNode);
-    //                 break; //break inner loop to avoid duplicate leaf nodes for same parcel     
-    //             }
-    //         }
-    //     }       
-
-    //     //run LCA on the vector of leaf nodes to find the common ancestor
-    //     if (leafNodesWithParcels.empty()) {
-    //         result.push_back(-1); //if no leaf nodes found for the parcels, return -1
-    //         continue;}
-    //     else if (leafNodesWithParcels.size() == 1) {
-    //         result.push_back(leafNodesWithParcels[0]); //if only one leaf node found, return that node
-    //         continue;}
-    //     else{
-    //         int lca = leafNodesWithParcels[0];
-    //         for (int i = 1; i < leafNodesWithParcels.size(); ++i) {
-    //             lca = getLCA(lca, leafNodesWithParcels[i], depth, up, LOG);
-    //         }
-    //         result.push_back(lca); //push the LCA of all leaf nodes found for the parcels   
-    //     }
+    //print the result
+    // std::cout << "LCA Results for given queries:\n";
+    // for (size_t i = 0; i < result.size(); ++i) {
+    //     std::cout << "Query " << i+1 << ": LCA Node Value = " << result[i] << "\n";
     // }
+    // std::cout << std::endl;
 
-    // //print out result
-    // cout<<"LCA Results for Queries: "<<endl;     
-    // for(int i = 0; i < result.size(); ++i) {
-    //     cout <<"Query " << i+1 << " LCA Node " << result[i] << endl;
-    // }   
-    // cout<<endl;  
+    // std::cout << "\n----Q2 completed----\n" << std::endl;
+
+    // return result;
 
 
-    return{};
+
+
+    //actual code starts here, remember to comment out the testing code above before submission
+    return sol(preorder, inorder, leafParcels, query);
+
 }
-
 
 
 
@@ -738,6 +908,146 @@ vector<int> reconstructPath(int start, int end, int state, vector<vector<int>>& 
 
 
 
+
+//function that solves question three
+long long sol(
+    const vector<vector<int>>& edges,
+    const vector<int>& metro_cities
+) {
+    // Determine the number of nodes in the graph
+    int n = 0;
+    for (auto &e : edges) n = max(n, max(e[0], e[1]));
+    for (int c : metro_cities) n = max(n, c);
+
+    // Build the graph as an adjacency list
+    vector<vector<pair<int,int>>> graph(n+1);
+    for (auto &e : edges) {
+        int u = e[0], v = e[1], w = e[2];
+        graph[u].push_back({v, w});
+        graph[v].push_back({u, w});
+    }
+
+    // Mark metro cities as boosters
+    vector<bool> isBooster(n+1, false);
+    for (int c : metro_cities) isBooster[c] = true;
+
+    // Run the modified Dijkstra algorithm from both trucks
+    auto res1 = runDijkstraWithBoosters(n, graph, 1, isBooster);
+    auto res2 = runDijkstraWithBoosters(n, graph, n, isBooster);
+
+    // Find the best city for the trucks to meet
+    long long bestTime = LLONG_MAX;
+    int meetCity = -1, state1 = -1, state2 = -1;
+
+    for (int city = 1; city <= n; city++) {
+        for (int s1 = 0; s1 < 2; s1++) {
+            for (int s2 = 0; s2 < 2; s2++) {
+                long long t1 = res1.dist[city][s1];
+                long long t2 = res2.dist[city][s2];
+                if (t1 == LLONG_MAX || t2 == LLONG_MAX) continue;
+                long long meetTime = max(t1, t2);
+                if (meetTime < bestTime) {
+                    bestTime = meetTime;
+                    meetCity = city;
+                    state1 = s1;
+                    state2 = s2;
+                }
+            }
+        }
+    }
+
+    // If no meeting is possible, return -1
+    if (bestTime == LLONG_MAX) return -1;
+
+    // Optionally reconstruct paths (for debugging or verification)
+    //auto pathTruck1 = reconstructPath(1, meetCity, state1, res1.parent);
+    //auto pathTruck2 = reconstructPath(n, meetCity, state2, res2.parent);
+
+    //print paths and travel times for debug
+    
+    // cout << "Truck 1 path: ";
+    // for (int city : pathTruck1) cout << city << " ";
+    // cout << " with travel time " << res1.dist[meetCity][state1] << "\n";    
+    // cout << "Truck 2 path: ";
+    // for (int city : pathTruck2) cout << city << " ";
+    // cout << " with travel time " << res2.dist[meetCity][state2] << "\n";    
+    // cout << "Meeting city: " << meetCity << " at time " << bestTime << "\n\n";
+    
+    
+
+    return bestTime;
+}
+
+
+//function to test the solution
+long long testing(int numCities, int numRoads, int numMetro, int maxWeight, bool ensureConnected = false) {
+    cout << "q3 Generating random graph with " << numCities << " cities, "
+         << numRoads << " roads, " << numMetro << " metro cities...\n";
+
+    // save previous settings and override
+    int old_NUM_CITIES = NUM_CITIES;
+    int old_NUM_ROADS = NUM_ROADS;
+    int old_NUM_METRO = NUM_METRO;
+    int old_MAX_WEIGHT = MAX_WEIGHT;
+    bool old_ENSURE_CONNECTED = ENSURE_CONNECTED;
+
+    NUM_CITIES = numCities;
+    NUM_ROADS = numRoads;
+    NUM_METRO = numMetro;
+    MAX_WEIGHT = maxWeight;
+    ENSURE_CONNECTED = ensureConnected;
+
+    // generate graph and metro cities
+    vector<vector<int>> edges = generateEdges();
+    vector<int> metroCities = generateMetroCities();
+
+    // // print generated graph for debug
+    // cout << "Edges (u, v, w):\n";
+    // for (auto &e : edges) {
+    //     cout << e[0] << " " << e[1] << " " << e[2] << "\n";
+    // }
+    // cout << "Metro cities: ";
+    // for (int c : metroCities) cout << c << " ";
+    // cout << "\n";
+
+    // //print the generated graph
+    // cout << "\nGenerated Graph:\n";
+    // for (auto &e : edges) {
+    //     cout << "City " << e[0] << " <--> City " << e[1] << " with travel time " << e[2] << "\n";
+    // }
+    // cout << "Metro Cities: ";
+    // for (int c : metroCities) cout << c << " ";
+    // cout << "\n\n"; 
+
+    // time the sol() execution
+    auto start = chrono::high_resolution_clock::now();
+    long long minTime = sol(edges, metroCities); 
+    auto stop = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
+
+    cout << "Execution time for q3_sol() on generated random graph: " << duration.count() << " µs\n";
+    cout << "Minimum meeting time returned by sol(): " << minTime << "\n";
+
+    // restore previous settings
+    NUM_CITIES = old_NUM_CITIES;
+    NUM_ROADS = old_NUM_ROADS;
+    NUM_METRO = old_NUM_METRO;
+    MAX_WEIGHT = old_MAX_WEIGHT;
+    ENSURE_CONNECTED = old_ENSURE_CONNECTED;
+
+    return minTime;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* 
 Complete this function
 */
@@ -747,161 +1057,23 @@ long long question_three(
 ) {
     // TODO: Implement function
 
-    //generate data for testing
-    cout<<"Generating Random Graph with "<<NUM_CITIES<<" cities, "<<NUM_ROADS<<" roads, "<<NUM_METRO<<" metro cities for testing..."<<endl;
+    // std::cout << "\n----Q3 started----\n" << std::endl;
 
-    //generate edgelist and metro cities
-    vector<vector<int>> genEdges = generateEdges();
-    vector<int> genMetroCities = generateMetroCities();
-
-    cout<<"Random Graph Generated."<<endl<<endl;
-    //print out generated graph
-    cout<<"Generated Edges (u, v, w): "<<endl;
-    for (const auto& e : genEdges) {
-        cout << e[0] << " " << e[1] << " " << e[2] << endl;
-    }
-    cout<<endl;
-
-    cout<<"Generated Metro Cities: "<<endl;
-    for (int c : genMetroCities) {
-        cout << c << " ";
-    }
-    cout<<endl<<endl;   
-
-    //find number of nodes (cities) in the graph
-    int genn = 0;
-    for (auto &e : genEdges) {
-        genn = max(genn, max(e[0], e[1])); //assuming cities are 1 to n inclusive
-    }
-    for (int c : genMetroCities) genn = max(genn, c);
-
-    //build the graph as adjacency list
-    vector<vector<pair<int,int>>> gengraph(genn+1);
-    for (auto &e : genEdges) {
-        int u = e[0], v = e[1], w = e[2];
-        gengraph[u].push_back({v,w});
-        gengraph[v].push_back({u,w});
-    }
+    // cout << "Testing the sol on generated random graph...\n"; 
+    // int numCities = 20;   // adjust as needed    //2 ≤ n ≤ 2×10^5 → number of cities
+    // int numRoads = 100;   // adjust as needed    //1 ≤ m ≤ 2×10^5 → number of roads
+    // int numMetro = 4;     // adjust as needed    //1 ≤ k ≤ n → number of metro cities
+    // int maxWeight = 100;  // adjust as needed    just pick positive even number
 
 
-    // Mark metro cities as boosters from the input list
-    vector<bool> genisBooster(genn+1, false);
-    for (int c : genMetroCities) genisBooster[c] = true;
+    // long long minTime = testing(numCities, numRoads, numMetro, maxWeight);
 
-    // Run Dijkstra from both trucks
-    auto genres1 = runDijkstraWithBoosters(genn, gengraph, 1, genisBooster);
-    auto genres2 = runDijkstraWithBoosters(genn, gengraph, genn, genisBooster);
+    // cout << "\n----Q3 completed----\n" << std::endl;
 
-    long long genbestTime = LLONG_MAX;
-    int genmeetCity = -1, state1 = -1, state2 = -1;
+    // return minTime;
 
-    // Find optimal meeting city
-    for (int city = 1; city <= genn; city++) {
-        for (int s1 = 0; s1 < 2; s1++) {
-            for (int s2 = 0; s2 < 2; s2++) {
-                long long t1 = genres1.dist[city][s1];
-                long long t2 = genres2.dist[city][s2];
-                if (t1 == LLONG_MAX || t2 == LLONG_MAX) continue;
-                long long meetTime = max(t1, t2);
-                if (meetTime < genbestTime) {
-                    genbestTime = meetTime;
-                    genmeetCity = city;
-                    state1 = s1;
-                    state2 = s2;
-                }
-            }
-        }
-    }
-
-    if (genbestTime == LLONG_MAX) {
-        cout << "No meeting possible\n";
-        return -1;
-    }
-
-    // Reconstruct and print paths
-    auto genpathTruck1 = reconstructPath(1, genmeetCity, state1, genres1.parent);
-    auto genpathTruck2 = reconstructPath(genn, genmeetCity, state2, genres2.parent);
-
-    cout << "Truck 1 path: ";
-    for (int x : genpathTruck1) cout << x << " ";
-    cout << "\nTruck 2 path: ";
-    for (int x : genpathTruck2) cout << x << " ";
-    cout << "\n";
-
-    cout<<"Meeting City: " << genmeetCity << "\n";
-    cout<<"Minimum Time to Meet: " << genbestTime << "\n";   
-    
-    
-    cout<<"Testing code complete."<<endl<<endl;
-
-    return genbestTime;
-
-    //actual program starts here, remember to comment out the testing code above before submission
-
-    // //find number of nodes (cities) in the graph
-    // int n = 0;
-    // for (auto &e : edges) {
-    //     n = max(n, max(e[0], e[1]));
-    // }
-    // for (int c : metro_cities) n = max(n, c);
-
-    // //build the graph as adjacency list
-    // vector<vector<pair<int,int>>> graph(n+1);
-    // for (auto &e : edges) {
-    //     int u = e[0], v = e[1], w = e[2];
-    //     graph[u].push_back({v,w});
-    //     graph[v].push_back({u,w});
-    // }
-
-
-    // // Mark metro cities as boosters from the input list
-    // vector<bool> isBooster(n+1, false);
-    // for (int c : metro_cities) isBooster[c] = true;
-
-    // // Run Dijkstra from both trucks
-    // auto res1 = runDijkstraWithBoosters(n, graph, 1, isBooster);
-    // auto res2 = runDijkstraWithBoosters(n, graph, n, isBooster);
-
-    // long long bestTime = LLONG_MAX;
-    // int meetCity = -1, state1 = -1, state2 = -1;
-
-    // // Find optimal meeting city
-    // for (int city = 1; city <= n; city++) {
-    //     for (int s1 = 0; s1 < 2; s1++) {
-    //         for (int s2 = 0; s2 < 2; s2++) {
-    //             long long t1 = res1.dist[city][s1];
-    //             long long t2 = res2.dist[city][s2];
-    //             if (t1 == LLONG_MAX || t2 == LLONG_MAX) continue;
-    //             long long meetTime = max(t1, t2);
-    //             if (meetTime < bestTime) {
-    //                 bestTime = meetTime;
-    //                 meetCity = city;
-    //                 state1 = s1;
-    //                 state2 = s2;
-    //             }
-    //         }
-    //     }
-    // }
-
-    // if (bestTime == LLONG_MAX) {
-    //     cout << "No meeting possible\n";
-    //     return -1;
-    // }
-
-    // // Reconstruct and print paths
-    // auto pathTruck1 = reconstructPath(1, meetCity, state1, res1.parent);
-    // auto pathTruck2 = reconstructPath(n, meetCity, state2, res2.parent);
-
-    // cout << "Truck 1 path: ";
-    // for (int x : pathTruck1) cout << x << " ";
-    // cout << "\nTruck 2 path: ";
-    // for (int x : pathTruck2) cout << x << " ";
-    // cout << "\n";
-
-    // cout<<"Meeting City: " << meetCity << "\n";
-    // cout<<"Minimum Time to Meet: " << bestTime << "\n";
-
-    //return bestTime;
+    //run on given input
+    return sol(edges, metro_cities);
 
 
 }

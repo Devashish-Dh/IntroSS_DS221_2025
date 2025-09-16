@@ -17,8 +17,12 @@ ADD_EXECUTABLE ( ${CMAKE_PROJECT_NAME} # remember to include the .cpp and .cu fi
 
 )
 
-TARGET_COMPILE_OPTIONS( ${CMAKE_PROJECT_NAME}
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O2 -pg -g -fno-omit-frame-pointer -funroll-loops -fopt-info-vec" )
+message(STATUS "CXX Flags: ${CMAKE_CXX_FLAGS}" )
 
+TARGET_COMPILE_OPTIONS( ${CMAKE_PROJECT_NAME}
     PRIVATE $<$<COMPILE_LANGUAGE:CXX>: >
     )
+
+
 
