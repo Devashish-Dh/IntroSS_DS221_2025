@@ -1,0 +1,121 @@
+Execution Time of q2_sol() on 1 nodes and 100000 queries: 10772 microseconds
+
+Execution Time of q2_sol() on 1 nodes and 100000 queries: 12640 microseconds
+
+Execution Time of q2_sol() on 1 nodes and 100000 queries: 13105 microseconds
+
+Execution Time of q2_sol() on 1 nodes and 100000 queries: 13737 microseconds
+
+Execution Time of q2_sol() on 2 nodes and 100000 queries: 12885 microseconds
+
+Execution Time of q2_sol() on 3 nodes and 100000 queries: 12866 microseconds
+
+Execution Time of q2_sol() on 3 nodes and 100000 queries: 10443 microseconds
+
+Execution Time of q2_sol() on 4 nodes and 100000 queries: 18539 microseconds
+
+Execution Time of q2_sol() on 5 nodes and 100000 queries: 14553 microseconds
+
+Execution Time of q2_sol() on 7 nodes and 100000 queries: 17130 microseconds
+
+Execution Time of q2_sol() on 9 nodes and 100000 queries: 15394 microseconds
+
+Execution Time of q2_sol() on 11 nodes and 100000 queries: 17846 microseconds
+
+Execution Time of q2_sol() on 14 nodes and 100000 queries: 16637 microseconds
+
+Execution Time of q2_sol() on 18 nodes and 100000 queries: 20059 microseconds
+
+Execution Time of q2_sol() on 22 nodes and 100000 queries: 17316 microseconds
+
+Execution Time of q2_sol() on 28 nodes and 100000 queries: 18403 microseconds
+
+Execution Time of q2_sol() on 35 nodes and 100000 queries: 22312 microseconds
+
+Execution Time of q2_sol() on 44 nodes and 100000 queries: 19251 microseconds
+
+Execution Time of q2_sol() on 55 nodes and 100000 queries: 20712 microseconds
+
+Execution Time of q2_sol() on 69 nodes and 100000 queries: 24287 microseconds
+
+Execution Time of q2_sol() on 86 nodes and 100000 queries: 25292 microseconds
+
+Execution Time of q2_sol() on 108 nodes and 100000 queries: 26016 microseconds
+
+Execution Time of q2_sol() on 135 nodes and 100000 queries: 30585 microseconds
+
+Execution Time of q2_sol() on 169 nodes and 100000 queries: 31571 microseconds
+
+Execution Time of q2_sol() on 211 nodes and 100000 queries: 33253 microseconds
+
+Execution Time of q2_sol() on 264 nodes and 100000 queries: 41288 microseconds
+
+Execution Time of q2_sol() on 330 nodes and 100000 queries: 52289 microseconds
+
+Execution Time of q2_sol() on 413 nodes and 100000 queries: 42240 microseconds
+
+Execution Time of q2_sol() on 516 nodes and 100000 queries: 59075 microseconds
+
+Execution Time of q2_sol() on 646 nodes and 100000 queries: 78653 microseconds
+
+Execution Time of q2_sol() on 807 nodes and 100000 queries: 66747 microseconds
+
+Execution Time of q2_sol() on 1009 nodes and 100000 queries: 90878 microseconds
+
+Execution Time of q2_sol() on 1262 nodes and 100000 queries: 126572 microseconds
+
+Execution Time of q2_sol() on 1577 nodes and 100000 queries: 99671 microseconds
+
+Execution Time of q2_sol() on 1972 nodes and 100000 queries: 216448 microseconds
+
+Execution Time of q2_sol() on 2465 nodes and 100000 queries: 348027 microseconds
+
+Execution Time of q2_sol() on 3081 nodes and 100000 queries: 417087 microseconds
+
+Execution Time of q2_sol() on 3851 nodes and 100000 queries: 459744 microseconds
+
+Execution Time of q2_sol() on 4814 nodes and 100000 queries: 634822 microseconds
+
+Execution Time of q2_sol() on 6018 nodes and 100000 queries: 794849 microseconds
+
+Execution Time of q2_sol() on 7523 nodes and 100000 queries: 942390 microseconds
+
+Execution Time of q2_sol() on 9403 nodes and 100000 queries: 1478813 microseconds
+
+Execution Time of q2_sol() on 11754 nodes and 100000 queries: 1577905 microseconds
+
+Execution Time of q2_sol() on 14693 nodes and 100000 queries: 1636785 microseconds
+
+Execution Time of q2_sol() on 18367 nodes and 100000 queries: 2945730 microseconds
+
+Execution Time of q2_sol() on 22958 nodes and 100000 queries: 3334966 microseconds
+
+Execution Time of q2_sol() on 28698 nodes and 100000 queries: 3835924 microseconds
+
+Execution Time of q2_sol() on 35873 nodes and 100000 queries: 5827932 microseconds
+
+Execution Time of q2_sol() on 44841 nodes and 100000 queries: 8615559 microseconds
+
+Execution Time of q2_sol() on 56051 nodes and 100000 queries: 6704084 microseconds
+
+Execution Time of q2_sol() on 70064 nodes and 100000 queries: 15203168 microseconds
+
+Execution Time of q2_sol() on 87581 nodes and 100000 queries: 30135178 microseconds
+
+Execution Time of q2_sol() on 109476 nodes and 100000 queries: 24106842 microseconds
+
+Execution Time of q2_sol() on 136845 nodes and 100000 queries: 32928905 microseconds
+
+Execution Time of q2_sol() on 171056 nodes and 100000 queries: 42227948 microseconds
+
+Execution Time of q2_sol() on 213821 nodes and 100000 queries: 76833380 microseconds
+
+Execution Time of q2_sol() on 267276 nodes and 100000 queries: 90479763 microseconds
+
+Execution Time of q2_sol() on 334095 nodes and 100000 queries: 107162432 microseconds
+
+Execution Time of q2_sol() on 417619 nodes and 100000 queries: 97481940 microseconds
+
+Execution Time of q2_sol() on 522024 nodes and 100000 queries: 187906842 microseconds
+
+

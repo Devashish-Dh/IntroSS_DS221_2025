@@ -1,0 +1,181 @@
+Execution Time of q3_sol() on 20 cities, 152 roads, 8 metro cities: 43 microseconds
+Minimum meeting time returned by sol(): 165984
+
+Execution Time of q3_sol() on 20 cities, 152 roads, 8 metro cities: 36 microseconds
+Minimum meeting time returned by sol(): 250308
+
+Execution Time of q3_sol() on 25 cities, 56 roads, 24 metro cities: 26 microseconds
+Minimum meeting time returned by sol(): 423497
+
+Execution Time of q3_sol() on 25 cities, 56 roads, 24 metro cities: 25 microseconds
+Minimum meeting time returned by sol(): 341044
+
+Execution Time of q3_sol() on 31 cities, 363 roads, 23 metro cities: 63 microseconds
+Minimum meeting time returned by sol(): 73792
+
+Execution Time of q3_sol() on 31 cities, 363 roads, 23 metro cities: 60 microseconds
+Minimum meeting time returned by sol(): 96401
+
+Execution Time of q3_sol() on 38 cities, 420 roads, 23 metro cities: 72 microseconds
+Minimum meeting time returned by sol(): 56425
+
+Execution Time of q3_sol() on 38 cities, 420 roads, 23 metro cities: 68 microseconds
+Minimum meeting time returned by sol(): 105872
+
+Execution Time of q3_sol() on 47 cities, 482 roads, 8 metro cities: 83 microseconds
+Minimum meeting time returned by sol(): 73792
+
+Execution Time of q3_sol() on 47 cities, 482 roads, 8 metro cities: 82 microseconds
+Minimum meeting time returned by sol(): 73792
+
+Execution Time of q3_sol() on 58 cities, 166 roads, 10 metro cities: 60 microseconds
+Minimum meeting time returned by sol(): 786297
+
+Execution Time of q3_sol() on 58 cities, 166 roads, 10 metro cities: 63 microseconds
+Minimum meeting time returned by sol(): 691330
+
+Execution Time of q3_sol() on 72 cities, 1174 roads, 5 metro cities: 170 microseconds
+Minimum meeting time returned by sol(): 125622
+
+Execution Time of q3_sol() on 72 cities, 1174 roads, 5 metro cities: 153 microseconds
+Minimum meeting time returned by sol(): 85170
+
+Execution Time of q3_sol() on 90 cities, 1337 roads, 78 metro cities: 181 microseconds
+Minimum meeting time returned by sol(): 56425
+
+Execution Time of q3_sol() on 90 cities, 1337 roads, 78 metro cities: 178 microseconds
+Minimum meeting time returned by sol(): 42273
+
+Execution Time of q3_sol() on 112 cities, 889 roads, 68 metro cities: 163 microseconds
+Minimum meeting time returned by sol(): 153931
+
+Execution Time of q3_sol() on 112 cities, 889 roads, 68 metro cities: 167 microseconds
+Minimum meeting time returned by sol(): 246524
+
+Execution Time of q3_sol() on 140 cities, 6334 roads, 100 metro cities: 605 microseconds
+Minimum meeting time returned by sol(): 31441
+
+Execution Time of q3_sol() on 140 cities, 6334 roads, 100 metro cities: 534 microseconds
+Minimum meeting time returned by sol(): 51818
+
+Execution Time of q3_sol() on 175 cities, 859 roads, 4 metro cities: 206 microseconds
+Minimum meeting time returned by sol(): 624064
+
+Execution Time of q3_sol() on 175 cities, 859 roads, 4 metro cities: 212 microseconds
+Minimum meeting time returned by sol(): 530402
+
+Execution Time of q3_sol() on 218 cities, 17078 roads, 212 metro cities: 1541 microseconds
+Minimum meeting time returned by sol(): 17692
+
+Execution Time of q3_sol() on 218 cities, 17078 roads, 212 metro cities: 1407 microseconds
+Minimum meeting time returned by sol(): 15981
+
+Execution Time of q3_sol() on 272 cities, 34592 roads, 227 metro cities: 2223 microseconds
+Minimum meeting time returned by sol(): 16457
+
+Execution Time of q3_sol() on 272 cities, 34592 roads, 227 metro cities: 2083 microseconds
+Minimum meeting time returned by sol(): 23388
+
+Execution Time of q3_sol() on 340 cities, 45 roads, 73 metro cities: 171 microseconds
+Minimum meeting time returned by sol(): 2873218
+
+Execution Time of q3_sol() on 340 cities, 45 roads, 73 metro cities: 85 microseconds
+Minimum meeting time returned by sol(): -1
+
+Execution Time of q3_sol() on 425 cities, 89400 roads, 78 metro cities: 6193 microseconds
+Minimum meeting time returned by sol(): 15206
+
+Execution Time of q3_sol() on 425 cities, 89400 roads, 78 metro cities: 5902 microseconds
+Minimum meeting time returned by sol(): 19323
+
+Execution Time of q3_sol() on 531 cities, 86891 roads, 98 metro cities: 5779 microseconds
+Minimum meeting time returned by sol(): 17570
+
+Execution Time of q3_sol() on 531 cities, 86891 roads, 98 metro cities: 5801 microseconds
+Minimum meeting time returned by sol(): 9482
+
+Execution Time of q3_sol() on 663 cities, 134231 roads, 202 metro cities: 9481 microseconds
+Minimum meeting time returned by sol(): 14764
+
+Execution Time of q3_sol() on 663 cities, 134231 roads, 202 metro cities: 9222 microseconds
+Minimum meeting time returned by sol(): 9625
+
+Execution Time of q3_sol() on 828 cities, 2420 roads, 435 metro cities: 783 microseconds
+Minimum meeting time returned by sol(): 555932
+
+Execution Time of q3_sol() on 828 cities, 2420 roads, 435 metro cities: 755 microseconds
+Minimum meeting time returned by sol(): 461589
+
+Execution Time of q3_sol() on 1035 cities, 12342 roads, 448 metro cities: 1951 microseconds
+Minimum meeting time returned by sol(): 231802
+
+Execution Time of q3_sol() on 1035 cities, 12342 roads, 448 metro cities: 1931 microseconds
+Minimum meeting time returned by sol(): 285713
+
+Execution Time of q3_sol() on 1293 cities, 438415 roads, 377 metro cities: 39700 microseconds
+Minimum meeting time returned by sol(): 10040
+
+Execution Time of q3_sol() on 1293 cities, 438415 roads, 377 metro cities: 38729 microseconds
+Minimum meeting time returned by sol(): 5797
+
+Execution Time of q3_sol() on 1616 cities, 521845 roads, 989 metro cities: 49242 microseconds
+Minimum meeting time returned by sol(): 9134
+
+Execution Time of q3_sol() on 1616 cities, 521845 roads, 989 metro cities: 47364 microseconds
+Minimum meeting time returned by sol(): 6802
+
+Execution Time of q3_sol() on 2020 cities, 95170 roads, 282 metro cities: 10314 microseconds
+Minimum meeting time returned by sol(): 48366
+
+Execution Time of q3_sol() on 2020 cities, 95170 roads, 282 metro cities: 10034 microseconds
+Minimum meeting time returned by sol(): 55386
+
+Execution Time of q3_sol() on 2525 cities, 3104862 roads, 738 metro cities: 509656 microseconds
+Minimum meeting time returned by sol(): 2794
+
+Execution Time of q3_sol() on 2525 cities, 3104862 roads, 738 metro cities: 488892 microseconds
+Minimum meeting time returned by sol(): 2754
+
+Execution Time of q3_sol() on 3156 cities, 1159798 roads, 1157 metro cities: 156121 microseconds
+Minimum meeting time returned by sol(): 9647
+
+Execution Time of q3_sol() on 3156 cities, 1159798 roads, 1157 metro cities: 152751 microseconds
+Minimum meeting time returned by sol(): 9506
+
+Execution Time of q3_sol() on 3945 cities, 704985 roads, 1800 metro cities: 87514 microseconds
+Minimum meeting time returned by sol(): 12092
+
+Execution Time of q3_sol() on 3945 cities, 704985 roads, 1800 metro cities: 86223 microseconds
+Minimum meeting time returned by sol(): 14203
+
+Execution Time of q3_sol() on 4931 cities, 7523932 roads, 3872 metro cities: 1458179 microseconds
+Minimum meeting time returned by sol(): 1250
+
+Execution Time of q3_sol() on 4931 cities, 7523932 roads, 3872 metro cities: 1432535 microseconds
+Minimum meeting time returned by sol(): 1492
+
+Execution Time of q3_sol() on 6163 cities, 7268415 roads, 1231 metro cities: 1416643 microseconds
+Minimum meeting time returned by sol(): 2840
+
+Execution Time of q3_sol() on 6163 cities, 7268415 roads, 1231 metro cities: 1420938 microseconds
+Minimum meeting time returned by sol(): 3969
+
+Execution Time of q3_sol() on 7703 cities, 29326004 roads, 3962 metro cities: 6447999 microseconds
+Minimum meeting time returned by sol(): 744
+
+Execution Time of q3_sol() on 7703 cities, 29326004 roads, 3962 metro cities: 6382404 microseconds
+Minimum meeting time returned by sol(): 790
+
+Execution Time of q3_sol() on 9628 cities, 21790559 roads, 5704 metro cities: 4860523 microseconds
+Minimum meeting time returned by sol(): 1437
+
+Execution Time of q3_sol() on 9628 cities, 21790559 roads, 5704 metro cities: 4868472 microseconds
+Minimum meeting time returned by sol(): 1836
+
+Execution Time of q3_sol() on 12035 cities, 62600270 roads, 560 metro cities: 16602506 microseconds
+Minimum meeting time returned by sol(): 1152
+
+Execution Time of q3_sol() on 12035 cities, 62600270 roads, 560 metro cities: 16668960 microseconds
+Minimum meeting time returned by sol(): 1136
+
+
