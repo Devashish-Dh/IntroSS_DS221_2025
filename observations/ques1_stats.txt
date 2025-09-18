@@ -1,0 +1,596 @@
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1
+
+Execution Time of q1_sol() on 1 parcels: 5 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1
+
+Execution Time of q1_sol() on 1 parcels: 2 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1
+
+Execution Time of q1_sol() on 1 parcels: 1 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1
+
+Execution Time of q1_sol() on 1 parcels: 0 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 2
+
+Execution Time of q1_sol() on 2 parcels: 2 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 3
+
+Execution Time of q1_sol() on 3 parcels: 2 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 3
+
+Execution Time of q1_sol() on 3 parcels: 2 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 4
+
+Execution Time of q1_sol() on 4 parcels: 2 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 5
+
+Execution Time of q1_sol() on 5 parcels: 3 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 7
+
+Execution Time of q1_sol() on 7 parcels: 3 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 9
+
+Execution Time of q1_sol() on 9 parcels: 2 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 11
+
+Execution Time of q1_sol() on 11 parcels: 2 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 14
+
+Execution Time of q1_sol() on 14 parcels: 4 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 18
+
+Execution Time of q1_sol() on 18 parcels: 4 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 22
+
+Execution Time of q1_sol() on 22 parcels: 4 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 28
+
+Execution Time of q1_sol() on 28 parcels: 6 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 35
+
+Execution Time of q1_sol() on 35 parcels: 6 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 44
+
+Execution Time of q1_sol() on 44 parcels: 8 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 55
+
+Execution Time of q1_sol() on 55 parcels: 13 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 69
+
+Execution Time of q1_sol() on 69 parcels: 11 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 86
+
+Execution Time of q1_sol() on 86 parcels: 13 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 108
+
+Execution Time of q1_sol() on 108 parcels: 17 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 135
+
+Execution Time of q1_sol() on 135 parcels: 24 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 169
+
+Execution Time of q1_sol() on 169 parcels: 29 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 211
+
+Execution Time of q1_sol() on 211 parcels: 29 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 264
+
+Execution Time of q1_sol() on 264 parcels: 38 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 330
+
+Execution Time of q1_sol() on 330 parcels: 40 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 413
+
+Execution Time of q1_sol() on 413 parcels: 60 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 516
+
+Execution Time of q1_sol() on 516 parcels: 62 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 646
+
+Execution Time of q1_sol() on 646 parcels: 77 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 807
+
+Execution Time of q1_sol() on 807 parcels: 113 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1009
+
+Execution Time of q1_sol() on 1009 parcels: 110 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1262
+
+Execution Time of q1_sol() on 1262 parcels: 150 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1577
+
+Execution Time of q1_sol() on 1577 parcels: 222 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1972
+
+Execution Time of q1_sol() on 1972 parcels: 216 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 2465
+
+Execution Time of q1_sol() on 2465 parcels: 285 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 3081
+
+Execution Time of q1_sol() on 3081 parcels: 339 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 3851
+
+Execution Time of q1_sol() on 3851 parcels: 529 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 4814
+
+Execution Time of q1_sol() on 4814 parcels: 602 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 6018
+
+Execution Time of q1_sol() on 6018 parcels: 820 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 7523
+
+Execution Time of q1_sol() on 7523 parcels: 1057 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 9403
+
+Execution Time of q1_sol() on 9403 parcels: 1260 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 11754
+
+Execution Time of q1_sol() on 11754 parcels: 1712 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 14693
+
+Execution Time of q1_sol() on 14693 parcels: 2417 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 18367
+
+Execution Time of q1_sol() on 18367 parcels: 2920 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 22958
+
+Execution Time of q1_sol() on 22958 parcels: 4100 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 28698
+
+Execution Time of q1_sol() on 28698 parcels: 6169 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 35873
+
+Execution Time of q1_sol() on 35873 parcels: 7645 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 44841
+
+Execution Time of q1_sol() on 44841 parcels: 10059 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 56051
+
+Execution Time of q1_sol() on 56051 parcels: 14889 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 70064
+
+Execution Time of q1_sol() on 70064 parcels: 16572 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 87581
+
+Execution Time of q1_sol() on 87581 parcels: 22166 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 109476
+
+Execution Time of q1_sol() on 109476 parcels: 33238 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 136845
+
+Execution Time of q1_sol() on 136845 parcels: 37199 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 171056
+
+Execution Time of q1_sol() on 171056 parcels: 47510 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 213821
+
+Execution Time of q1_sol() on 213821 parcels: 58349 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 267276
+
+Execution Time of q1_sol() on 267276 parcels: 80345 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 334095
+
+Execution Time of q1_sol() on 334095 parcels: 101097 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 417619
+
+Execution Time of q1_sol() on 417619 parcels: 121397 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 522024
+
+Execution Time of q1_sol() on 522024 parcels: 182283 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 652530
+
+Execution Time of q1_sol() on 652530 parcels: 223433 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 815663
+
+Execution Time of q1_sol() on 815663 parcels: 288865 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1019578
+
+Execution Time of q1_sol() on 1019578 parcels: 486980 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1274473
+
+Execution Time of q1_sol() on 1274473 parcels: 634327 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1593091
+
+Execution Time of q1_sol() on 1593091 parcels: 830006 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 1991364
+
+Execution Time of q1_sol() on 1991364 parcels: 1149978 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 2489206
+
+Execution Time of q1_sol() on 2489206 parcels: 1656269 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 3111507
+
+Execution Time of q1_sol() on 3111507 parcels: 2042079 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 3889384
+
+Execution Time of q1_sol() on 3889384 parcels: 2735170 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 4861730
+
+Execution Time of q1_sol() on 4861730 parcels: 3174285 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 6077163
+
+Execution Time of q1_sol() on 6077163 parcels: 3893112 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 7596454
+
+Execution Time of q1_sol() on 7596454 parcels: 4736110 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 9495567
+
+Execution Time of q1_sol() on 9495567 parcels: 6986204 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 11869459
+
+Execution Time of q1_sol() on 11869459 parcels: 8304378 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 14836824
+
+Execution Time of q1_sol() on 14836824 parcels: 10148485 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 18546030
+
+Execution Time of q1_sol() on 18546030 parcels: 14946048 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 23182538
+
+Execution Time of q1_sol() on 23182538 parcels: 17510642 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 28978173
+
+Execution Time of q1_sol() on 28978173 parcels: 20687186 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 36222716
+
+Execution Time of q1_sol() on 36222716 parcels: 24727351 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 45278395
+
+Execution Time of q1_sol() on 45278395 parcels: 35119316 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 56597994
+
+Execution Time of q1_sol() on 56597994 parcels: 39480635 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 70747492
+
+Execution Time of q1_sol() on 70747492 parcels: 56371499 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 88434366
+
+Execution Time of q1_sol() on 88434366 parcels: 56573397 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 110542957
+
+Execution Time of q1_sol() on 110542957 parcels: 77738649 microseconds
+
+Parameters for Data Generation:
+Range of IDs: 1 to 100000000
+Range of Weights: 1 to 100000000
+Number of Parcels Generated: 138178696
+
+Execution Time of q1_sol() on 138178696 parcels: 98362611 microseconds
+
+

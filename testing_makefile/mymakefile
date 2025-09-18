@@ -1,0 +1,18 @@
+# Makefile for ISS Assignment 1
+
+CXX = g++
+CXXFLAGS = -std=c++17 -Wall -O2 -g -fno-omit-frame-pointer -funroll-loops -fopt-info-vec
+TARGET = ISSassg1_using_makefile
+SRC = main.cpp
+HEADERS = user_code.h file_reader.h file_writer.h
+
+all: $(TARGET)
+
+$(TARGET): $(SRC) $(HEADERS)
+	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET)
+
+run: $(TARGET)
+	./$(TARGET)
+
+clean:
+	rm -f $(TARGET) *.o build/q1_stats.txt
