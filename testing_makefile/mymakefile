@@ -14,5 +14,4 @@ $(TARGET): $(SRC) $(HEADERS)
 run: $(TARGET)
 	./$(TARGET)
 
-clean:
-	rm -f $(TARGET) *.o build/q1_stats.txt
+

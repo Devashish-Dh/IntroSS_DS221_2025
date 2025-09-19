@@ -18,12 +18,61 @@
 #include <set>
 #include <fstream>
 #include <string>
-
 #include <cstddef>
 
+#include <sys/resource.h>  // getrusage
+#include <unistd.h>        // getpid
 
 using namespace std;
 
+
+
+
+
+
+// Helper to get current memory usage in KB (resident set size)
+long getMemoryUsageKB() {
+    struct rusage usage;
+    getrusage(RUSAGE_SELF, &usage);
+#if defined(__APPLE__) && defined(__MACH__)
+    return usage.ru_maxrss / 1024; // macOS reports bytes
+#else
+    return usage.ru_maxrss;        // Linux reports KB
+#endif
+}
+
+
+
+// Utility: Run a function and measure time + memory, append results to file, return result
+template <typename Func, typename... Args>
+auto profileFunction(const std::string &name,
+                     const std::string &output_file,
+                     Func f, Args... args) -> decltype(f(args...)) {
+    auto start_time = std::chrono::high_resolution_clock::now();
+    long mem_before = getMemoryUsageKB();
+
+    auto result = f(args...);  // run the function and capture return value
+
+    auto end_time = std::chrono::high_resolution_clock::now();
+    long mem_after = getMemoryUsageKB();
+
+    auto elapsed_us = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time).count();
+    long mem_delta = mem_after - mem_before;
+
+    std::ofstream fout(output_file, std::ios::app);
+    if (fout.is_open()) {
+        fout << "Function [" << name << "] took "
+             << elapsed_us << " microseconds, "
+             << "Memory usage before: " << mem_before << " KB, "
+             << "after: " << mem_after << " KB, "
+             << "delta: " << mem_delta << " KB\n";
+        fout.close();
+    } else {
+        std::cerr << "Error: Could not open file " << output_file << "\n";
+    }
+
+    return result;
+}
 
 
 // Flush caches by writing into a buffer larger than LLC
@@ -80,7 +129,7 @@ vector<vector<int>> sortByParcelId(const vector<vector<int>>& input_parcels) {
 }
 
 //function that solves the problem
-vector<vector<int>> sol(const vector<vector<int>>& parcels) {
+vector<vector<int>> sol_q1(const vector<vector<int>>& parcels) {
     unordered_map<int, int> min_weights;
     unordered_map<int, int> counts;
 
@@ -159,7 +208,7 @@ vector<vector<int>> testing( int numberOfParcelsWanted, const string& output_fil
         cerr << "Error: Could not open file " << output_file << endl;
         return {};
     }   
-    fout << "Parameters for Data Generation:\n";
+    fout << "\n\n\nParameters for Q1 Data Generation:\n";
     fout << "Range of IDs: 1 to " << rangeOfId << endl;
     fout << "Range of Weights: 1 to " << rangeOfWeight << endl;
     fout << "Number of Parcels Generated: " << numberOfParcelsWanted << endl << endl;
@@ -173,22 +222,10 @@ vector<vector<int>> testing( int numberOfParcelsWanted, const string& output_fil
     //flush_cache before benchmarking...
     flush_cache();
 
+    // Run and profile the solution
+    vector<vector<int>> result = profileFunction("sol_q1", "q1_stats.txt", sol_q1, generatedParcels);
 
-    auto start = std::chrono::high_resolution_clock::now();
-
-    // Run and time the solution
-    vector<vector<int>> result = sol(generatedParcels);
-
-    auto stop = std::chrono::high_resolution_clock::now();
-
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-
-    // Write execution time to output file
-    fout << "Execution Time of q1_sol() on " << numberOfParcelsWanted 
-         << " parcels: " << duration.count() << " microseconds\n\n";
-
-    //cout << "Time taken by q1 sol(): " << duration.count() << " microseconds" << endl;
-
+    // Optional: print the result
     // cout << "Duplicate Parcels with Minimum Weight:\n";
     // for (auto& parcel : result) {
     //     cout << "Id " << parcel[0] << " MinWeight " << parcel[1] << endl;
@@ -197,9 +234,6 @@ vector<vector<int>> testing( int numberOfParcelsWanted, const string& output_fil
 
     return result; 
 }
-
-
-
 
 
 
@@ -222,21 +256,20 @@ vector<vector<int>> question_one(const vector<vector<int>>& parcels) {
             vector<vector<int>> output = testing(static_cast<int>(i), output_file);
         }
     
-
     //close the output file
     fout.close();
 
 
-    //testing code
-    //vector<vector<int>> testResult = testing();
-    //return testResult;
-
     //std::cout << "\n----Q1 completed----\n" << std::endl;
 
-    //actual code starts here, remember to comment out the testing code above before submission
-    //return sol(parcels);
+        
+    //one run with largest input size for gprof
+    //vector<vector<int>> output = testing(100000000, output_file);
+    //return output;
 
-    return {};
+
+    //actual code starts here, remember to comment out the testing code above before submission
+    return sol_q1(parcels);
 }
 
 
@@ -455,7 +488,7 @@ std::tuple< vector<int>, vector<int>, unordered_map<int, vector<int>>, vector<ve
     // cout<<endl;
 
     //generate some random queries (each query is a list of parcel ids from usedParcelIds)
-    int numQueries = 100000; //arbitrary choice of number of queries
+    int numQueries = 100000; //given choice of number of queries
     vector<int> usedParcelIdList;
     for (const auto& [parcelId, used] : usedParcelIds) {
         if (used) {
@@ -495,7 +528,7 @@ std::tuple< vector<int>, vector<int>, unordered_map<int, vector<int>>, vector<ve
 // preorder, inorder: traversals of the tree
 // leafParcels: vector where leafParcels[i] are parcel ids assigned to the i-th leaf in level-order (wrapper will align them)
 // query: vector of queries; each query is a vector of parcel ids
-vector<int> sol(
+vector<int> sol_q2(
     const vector<int>& preorder,
     const vector<int>& inorder,
     const vector<vector<int>>& leafParcels,
@@ -721,7 +754,7 @@ vector<int> q2_testing(int numNodes, int numQueries, const string& output_file) 
 
     // Generate random tree + parcels + queries
     auto [preorder, inorder, leafParcelMap, queries] = generateRandomBinaryTree(numNodes, numQueries);
-
+    
     // Convert leafParcelMap to vector<vector<int>> in left-to-right order of leaves
     vector<int> leafNodes;
     getLeafNodes(buildTree(preorder, inorder), leafNodes);
@@ -732,23 +765,23 @@ vector<int> q2_testing(int numNodes, int numQueries, const string& output_file) 
         else leafParcels.push_back({});
     }
 
-    
-    // Time the sol() call
-    auto start = std::chrono::high_resolution_clock::now();
-    vector<int> result = sol(preorder, inorder, leafParcels, queries);
-    auto stop = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    //cout << "Execution Time on of q2_sol() on generated inputs: " << duration.count() << " µs\n";
-
-    // Write execution time to output file
+    //write parameters used to output file
     ofstream fout(output_file, ios::app); // append mode
     if (!fout.is_open()) {
         cerr << "Error: Could not open file " << output_file << endl;
         return {};
     }   
-    fout << "Execution Time of q2_sol() on " << numNodes 
-         << " nodes and " << numQueries << " queries: " << duration.count() << " microseconds\n\n";
-    
+    fout << "\n\n\nParameters for Q2 Data Generation:\n";
+    fout << "Number of Nodes: " << numNodes << endl;
+    fout << "Number of Leaf Nodes: " << leafNodes.size() << endl;
+    fout << "Number of Queries: " << numQueries << endl << endl;
+
+
+    //flush_cache before benchmarking...
+    flush_cache();
+
+    // Run and profile the solution
+    vector<int> result = profileFunction("sol_q2", output_file, sol_q2, preorder, inorder, leafParcels, queries);
 
     // // Optional debug print
     // cout << "Query results (LCA node values):\n";
@@ -790,7 +823,7 @@ vector<int> question_two(
         return {};
     }
 
-    //for loop that doubles number of nodes each time and calls the testing function, upper limit is 10^6
+    //for loop that increases number of nodes each time and calls the testing function, upper limit is 10^6
     for (double i = 1; i <= 1500000; i *= 1.25 ) {
         vector<int> output = q2_testing(static_cast<int>(i), 100000, output_file);
     }
@@ -799,40 +832,12 @@ vector<int> question_two(
     //close the output file
     fout.close();
 
-    // Example testing / data generation
-    // const int numNodes = 10; //variable                  1 ≤ n ≤ 10^6 → number of leaf nodes (loading junctions) so max leaves = 2* 10^6
-    // const int numQueries = 100000;
-
-    // vector<int> testResult = testing(numNodes, numQueries);
-    
-    // std::cout << "\n----Q2 completed----\n" << std::endl;
-    // return testResult;
-    
-
-
-
-    //vector<int> result = sol(preorder, inorder, leafParcels, query);
-
-    //print the result
-    // std::cout << "LCA Results for given queries:\n";
-    // for (size_t i = 0; i < result.size(); ++i) {
-    //     std::cout << "Query " << i+1 << ": LCA Node Value = " << result[i] << "\n";
-    // }
-    // std::cout << std::endl;
-
-    // std::cout << "\n----Q2 completed----\n" << std::endl;
-
-    // return result;
-
-
-
+    //one run with largest input size for gprof
+    //vector<int> output = q2_testing(1000000, 100000, output_file);
+    //return output;
 
     //actual code starts here, remember to comment out the testing code above before submission
-    //return sol(preorder, inorder, leafParcels, query);
-
-
-    return {};
-
+    return sol_q2(preorder, inorder, leafParcels, query);
 }
 
 
@@ -996,7 +1001,7 @@ vector<int> reconstructPath(int start, int end, int state, vector<vector<int>>& 
 
 
 //function that solves question three
-long long sol(
+long long sol_q3(
     const vector<vector<int>>& edges,
     const vector<int>& metro_cities
 ) {
@@ -1106,26 +1111,25 @@ long long q3_testing(int numCities, int numRoads, int numMetro, int maxWeight, b
     // for (int c : metroCities) cout << c << " ";
     // cout << "\n\n"; 
 
-    // time the sol() execution
-    auto start = chrono::high_resolution_clock::now();
-    long long minTime = sol(edges, metroCities); 
-    auto stop = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
-
-    //cout << "Execution time for q3_sol() on generated random graph: " << duration.count() << " µs\n";
-    //cout << "Minimum meeting time returned by sol(): " << minTime << "\n";
-
-    // Write execution time to output file
+    //write parameters used to output file
     ofstream fout(output_file, ios::app); // append mode
     if (!fout.is_open()) {
         cerr << "Error: Could not open file " << output_file << endl;
         return -1;
     }   
-    fout << "Execution Time of q3_sol() on " << numCities 
-         << " cities, " << numRoads << " roads, " << numMetro 
-         << " metro cities: " << duration.count() << " microseconds\n";
-    fout << "Minimum meeting time returned by sol(): " << minTime << "\n\n";
-    fout.close();
+    fout << "\n\n\nParameters for Q3 Data Generation:\n";
+    fout << "Number of Cities: " << numCities << endl;
+    fout << "Number of Roads: " << numRoads << endl;
+    fout << "Number of Metro Cities: " << numMetro << endl;
+    fout << "Max Road Weight: " << maxWeight*2 << endl;
+    fout << "Ensure Connected: " << (ensureConnected ? "1" : "0") << endl << endl; //yes:1, no:0
+
+
+    //flush_cache before benchmarking...
+    flush_cache();
+
+    // Run and profile the solution
+    long long minTime = profileFunction("sol_q3", output_file, sol_q3, edges, metroCities);
 
     // restore previous settings
     NUM_CITIES = old_NUM_CITIES;
@@ -1160,7 +1164,7 @@ long long question_three(
 
     // cout << "Testing the sol on generated random graph...\n"; 
     int numCities = 20;
-    int maxWeight = 200;
+    int maxWeight = 10000;  // remember to keep it even (maximum weight generated will be 2*MAX_WEIGHT)
     std::string output_file = "q3_stats.txt";
 
     std::ofstream fout(output_file, std::ios::app);
@@ -1171,7 +1175,7 @@ long long question_three(
 
     std::mt19937 gen(42); // Mersenne Twister engine
 
-    // Use integer for loop variable
+    // Use long long for loop variable
     for (long long i = numCities; i <= 1500000; i = static_cast<long long>(i * 1.25)) {
         std::uniform_int_distribution<int> metroDistrib(1, static_cast<int>(i));
         int numMetro = metroDistrib(gen);
@@ -1190,23 +1194,47 @@ long long question_three(
         long long time2 = q3_testing(static_cast<int>(i), numRoads, numMetro, maxWeight, false, output_file);
 
     }
-    
+
+
+    // // Modified benchmarking loop: edges scale with number of cities
+    // long long numCitiesStart = 20;
+    // long long numCitiesMax   = 1500000;
+
+    // for (long long i = numCitiesStart; i <= numCitiesMax; i = static_cast<long long>(i * 1.25)) {
+    //     // Randomly choose number of metro cities
+    //     std::uniform_int_distribution<int> metroDistrib(1, static_cast<int>(i));
+    //     int numMetro = metroDistrib(gen);
+
+    //     // Maximum possible edges in a complete graph
+    //     long long maxEdges = i * (i - 1) / 2;
+    //     long long myRoads = 0;
+
+    //     if (maxEdges > 0) {
+    //         std::uniform_int_distribution<long long> roadDistrib(1, maxEdges);
+    //         myRoads = roadDistrib(gen);
+    //     }
+
+    //     // Now edges grow naturally with cities; no arbitrary 100k cap
+    //     int numRoads = static_cast<int>(myRoads);
+
+    //     // Call q3_testing with increasing edges
+    //     long long time1 = q3_testing(static_cast<int>(i), numRoads, numMetro, maxWeight, true, output_file);
+    //     long long time2 = q3_testing(static_cast<int>(i), numRoads, numMetro, maxWeight, false, output_file);
+    // }
+
+
+    //one run with largest input size for gprof
+    //long long output = q3_testing(1000000, 100000, 500, 10000, true, output_file);
+    //return output;            
+
 
     //close the output file
     fout.close();
 
-    // long long minTime = testing(numCities, numRoads, numMetro, maxWeight);
-
     // cout << "\n----Q3 completed----\n" << std::endl;
 
-    // return minTime;
-
     //run on given input
-    //return sol(edges, metro_cities);
-
-
-    return 0;
-
+    return sol_q3(edges, metro_cities);
 }
 
 
