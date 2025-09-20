@@ -1,0 +1,216 @@
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 1
+Number of Leaf Nodes: 1
+Number of Queries: 100000
+
+Function [sol_q2] took 11731 microseconds, Memory usage before: 87976 KB, after: 88764 KB, delta: 788 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 1
+Number of Leaf Nodes: 1
+Number of Queries: 100000
+
+Function [sol_q2] took 13390 microseconds, Memory usage before: 88764 KB, after: 88980 KB, delta: 216 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 3
+Number of Leaf Nodes: 1
+Number of Queries: 100000
+
+Function [sol_q2] took 13787 microseconds, Memory usage before: 88980 KB, after: 88980 KB, delta: 0 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 6
+Number of Leaf Nodes: 3
+Number of Queries: 100000
+
+Function [sol_q2] took 16356 microseconds, Memory usage before: 88980 KB, after: 88980 KB, delta: 0 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 11
+Number of Leaf Nodes: 3
+Number of Queries: 100000
+
+Function [sol_q2] took 14354 microseconds, Memory usage before: 88980 KB, after: 88980 KB, delta: 0 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 21
+Number of Leaf Nodes: 9
+Number of Queries: 100000
+
+Function [sol_q2] took 18716 microseconds, Memory usage before: 88980 KB, after: 88980 KB, delta: 0 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 40
+Number of Leaf Nodes: 15
+Number of Queries: 100000
+
+Function [sol_q2] took 17596 microseconds, Memory usage before: 91092 KB, after: 91092 KB, delta: 0 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 74
+Number of Leaf Nodes: 25
+Number of Queries: 100000
+
+Function [sol_q2] took 26580 microseconds, Memory usage before: 91092 KB, after: 91092 KB, delta: 0 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 137
+Number of Leaf Nodes: 45
+Number of Queries: 100000
+
+Function [sol_q2] took 30184 microseconds, Memory usage before: 91092 KB, after: 91092 KB, delta: 0 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 253
+Number of Leaf Nodes: 84
+Number of Queries: 100000
+
+Function [sol_q2] took 38256 microseconds, Memory usage before: 91092 KB, after: 91092 KB, delta: 0 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 469
+Number of Leaf Nodes: 154
+Number of Queries: 100000
+
+Function [sol_q2] took 48864 microseconds, Memory usage before: 91092 KB, after: 91092 KB, delta: 0 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 868
+Number of Leaf Nodes: 291
+Number of Queries: 100000
+
+Function [sol_q2] took 68742 microseconds, Memory usage before: 91092 KB, after: 91092 KB, delta: 0 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 1607
+Number of Leaf Nodes: 527
+Number of Queries: 100000
+
+Function [sol_q2] took 115023 microseconds, Memory usage before: 91620 KB, after: 91620 KB, delta: 0 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 2973
+Number of Leaf Nodes: 988
+Number of Queries: 100000
+
+Function [sol_q2] took 395373 microseconds, Memory usage before: 91620 KB, after: 92676 KB, delta: 1056 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 5500
+Number of Leaf Nodes: 1840
+Number of Queries: 100000
+
+Function [sol_q2] took 812624 microseconds, Memory usage before: 94260 KB, after: 96108 KB, delta: 1848 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 10175
+Number of Leaf Nodes: 3439
+Number of Queries: 100000
+
+Function [sol_q2] took 1397838 microseconds, Memory usage before: 97428 KB, after: 102444 KB, delta: 5016 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 18825
+Number of Leaf Nodes: 6366
+Number of Queries: 100000
+
+Function [sol_q2] took 2279679 microseconds, Memory usage before: 102444 KB, after: 114588 KB, delta: 12144 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 34827
+Number of Leaf Nodes: 11551
+Number of Queries: 100000
+
+Function [sol_q2] took 5188962 microseconds, Memory usage before: 118076 KB, after: 136360 KB, delta: 18284 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 64430
+Number of Leaf Nodes: 21434
+Number of Queries: 100000
+
+Function [sol_q2] took 9481698 microseconds, Memory usage before: 150736 KB, after: 178104 KB, delta: 27368 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 119196
+Number of Leaf Nodes: 39653
+Number of Queries: 100000
+
+Function [sol_q2] took 32500895 microseconds, Memory usage before: 207316 KB, after: 257200 KB, delta: 49884 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 220513
+Number of Leaf Nodes: 73438
+Number of Queries: 100000
+
+Function [sol_q2] took 52876308 microseconds, Memory usage before: 293236 KB, after: 376224 KB, delta: 82988 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 407949
+Number of Leaf Nodes: 136106
+Number of Queries: 100000
+
+Function [sol_q2] took 160481970 microseconds, Memory usage before: 497216 KB, after: 624228 KB, delta: 127012 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 754706
+Number of Leaf Nodes: 251552
+Number of Queries: 100000
+
+Function [sol_q2] took 158501073 microseconds, Memory usage before: 776160 KB, after: 1083792 KB, delta: 307632 KB
+
+
+
+Parameters for Q2 Data Generation:
+Number of Nodes: 1396206
+Number of Leaf Nodes: 465285
+Number of Queries: 100000
+
+Function [sol_q2] took 600935590 microseconds, Memory usage before: 1393600 KB, after: 1955108 KB, delta: 561508 KB

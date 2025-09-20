@@ -1,0 +1,1122 @@
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 20
+Number of Roads: 152
+Number of Metro Cities: 8
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 42 microseconds, Memory usage before: 77180 KB, after: 77180 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 20
+Number of Roads: 152
+Number of Metro Cities: 8
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 33 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 25
+Number of Roads: 56
+Number of Metro Cities: 24
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 28 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 25
+Number of Roads: 56
+Number of Metro Cities: 24
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 25 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 31
+Number of Roads: 363
+Number of Metro Cities: 23
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 59 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 31
+Number of Roads: 363
+Number of Metro Cities: 23
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 53 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 38
+Number of Roads: 420
+Number of Metro Cities: 23
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 69 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 38
+Number of Roads: 420
+Number of Metro Cities: 23
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 66 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 47
+Number of Roads: 482
+Number of Metro Cities: 8
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 78 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 47
+Number of Roads: 482
+Number of Metro Cities: 8
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 75 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 58
+Number of Roads: 166
+Number of Metro Cities: 10
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 59 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 58
+Number of Roads: 166
+Number of Metro Cities: 10
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 59 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 72
+Number of Roads: 1174
+Number of Metro Cities: 5
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 151 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 72
+Number of Roads: 1174
+Number of Metro Cities: 5
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 131 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 90
+Number of Roads: 1337
+Number of Metro Cities: 78
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 166 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 90
+Number of Roads: 1337
+Number of Metro Cities: 78
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 157 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 112
+Number of Roads: 889
+Number of Metro Cities: 68
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 154 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 112
+Number of Roads: 889
+Number of Metro Cities: 68
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 154 microseconds, Memory usage before: 77212 KB, after: 77212 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 140
+Number of Roads: 6334
+Number of Metro Cities: 100
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 460 microseconds, Memory usage before: 78000 KB, after: 78000 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 140
+Number of Roads: 6334
+Number of Metro Cities: 100
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 471 microseconds, Memory usage before: 78068 KB, after: 78176 KB, delta: 108 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 175
+Number of Roads: 859
+Number of Metro Cities: 4
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 204 microseconds, Memory usage before: 78176 KB, after: 78176 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 175
+Number of Roads: 859
+Number of Metro Cities: 4
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 196 microseconds, Memory usage before: 78176 KB, after: 78176 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 218
+Number of Roads: 17078
+Number of Metro Cities: 212
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 1103 microseconds, Memory usage before: 79232 KB, after: 79932 KB, delta: 700 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 218
+Number of Roads: 17078
+Number of Metro Cities: 212
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 944 microseconds, Memory usage before: 79932 KB, after: 79932 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 272
+Number of Roads: 34592
+Number of Metro Cities: 227
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 1716 microseconds, Memory usage before: 82052 KB, after: 82316 KB, delta: 264 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 272
+Number of Roads: 34592
+Number of Metro Cities: 227
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 1596 microseconds, Memory usage before: 82800 KB, after: 82800 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 340
+Number of Roads: 45
+Number of Metro Cities: 73
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 168 microseconds, Memory usage before: 82800 KB, after: 82800 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 340
+Number of Roads: 45
+Number of Metro Cities: 73
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 88 microseconds, Memory usage before: 82800 KB, after: 82800 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 425
+Number of Roads: 89400
+Number of Metro Cities: 78
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 4369 microseconds, Memory usage before: 89056 KB, after: 91168 KB, delta: 2112 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 425
+Number of Roads: 89400
+Number of Metro Cities: 78
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 4334 microseconds, Memory usage before: 91168 KB, after: 91168 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 531
+Number of Roads: 86891
+Number of Metro Cities: 98
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 3916 microseconds, Memory usage before: 91168 KB, after: 91168 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 531
+Number of Roads: 86891
+Number of Metro Cities: 98
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 4916 microseconds, Memory usage before: 91168 KB, after: 91168 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 663
+Number of Roads: 100000
+Number of Metro Cities: 202
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 5340 microseconds, Memory usage before: 91168 KB, after: 92952 KB, delta: 1784 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 663
+Number of Roads: 100000
+Number of Metro Cities: 202
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 4792 microseconds, Memory usage before: 93216 KB, after: 93480 KB, delta: 264 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 828
+Number of Roads: 2420
+Number of Metro Cities: 435
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 743 microseconds, Memory usage before: 93480 KB, after: 93480 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 828
+Number of Roads: 2420
+Number of Metro Cities: 435
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 773 microseconds, Memory usage before: 93480 KB, after: 93480 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 1035
+Number of Roads: 12342
+Number of Metro Cities: 448
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 1814 microseconds, Memory usage before: 93480 KB, after: 93480 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 1035
+Number of Roads: 12342
+Number of Metro Cities: 448
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 1796 microseconds, Memory usage before: 93480 KB, after: 93480 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 1293
+Number of Roads: 100000
+Number of Metro Cities: 377
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 6619 microseconds, Memory usage before: 93480 KB, after: 93744 KB, delta: 264 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 1293
+Number of Roads: 100000
+Number of Metro Cities: 377
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 6267 microseconds, Memory usage before: 93744 KB, after: 93744 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 1616
+Number of Roads: 100000
+Number of Metro Cities: 989
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 6829 microseconds, Memory usage before: 93744 KB, after: 93744 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 1616
+Number of Roads: 100000
+Number of Metro Cities: 989
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 6908 microseconds, Memory usage before: 93744 KB, after: 93744 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 2020
+Number of Roads: 95170
+Number of Metro Cities: 282
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 7491 microseconds, Memory usage before: 93744 KB, after: 93744 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 2020
+Number of Roads: 95170
+Number of Metro Cities: 282
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 7584 microseconds, Memory usage before: 94536 KB, after: 94536 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 2525
+Number of Roads: 100000
+Number of Metro Cities: 738
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 8891 microseconds, Memory usage before: 94536 KB, after: 94536 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 2525
+Number of Roads: 100000
+Number of Metro Cities: 738
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 8993 microseconds, Memory usage before: 95592 KB, after: 95592 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 3156
+Number of Roads: 100000
+Number of Metro Cities: 1157
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 10079 microseconds, Memory usage before: 95592 KB, after: 95592 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 3156
+Number of Roads: 100000
+Number of Metro Cities: 1157
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 10063 microseconds, Memory usage before: 95592 KB, after: 95592 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 3945
+Number of Roads: 100000
+Number of Metro Cities: 1800
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 11338 microseconds, Memory usage before: 95592 KB, after: 95592 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 3945
+Number of Roads: 100000
+Number of Metro Cities: 1800
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 11651 microseconds, Memory usage before: 95592 KB, after: 95592 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 4931
+Number of Roads: 100000
+Number of Metro Cities: 3872
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 13319 microseconds, Memory usage before: 95592 KB, after: 95592 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 4931
+Number of Roads: 100000
+Number of Metro Cities: 3872
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 13476 microseconds, Memory usage before: 95592 KB, after: 95592 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 6163
+Number of Roads: 100000
+Number of Metro Cities: 1231
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 15814 microseconds, Memory usage before: 95592 KB, after: 95592 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 6163
+Number of Roads: 100000
+Number of Metro Cities: 1231
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 15676 microseconds, Memory usage before: 95592 KB, after: 95592 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 7703
+Number of Roads: 100000
+Number of Metro Cities: 3962
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 18173 microseconds, Memory usage before: 95592 KB, after: 95592 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 7703
+Number of Roads: 100000
+Number of Metro Cities: 3962
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 18157 microseconds, Memory usage before: 95592 KB, after: 95592 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 9628
+Number of Roads: 100000
+Number of Metro Cities: 5704
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 21629 microseconds, Memory usage before: 95592 KB, after: 95912 KB, delta: 320 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 9628
+Number of Roads: 100000
+Number of Metro Cities: 5704
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 21406 microseconds, Memory usage before: 96176 KB, after: 96704 KB, delta: 528 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 12035
+Number of Roads: 100000
+Number of Metro Cities: 560
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 25818 microseconds, Memory usage before: 96704 KB, after: 96968 KB, delta: 264 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 12035
+Number of Roads: 100000
+Number of Metro Cities: 560
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 26529 microseconds, Memory usage before: 96968 KB, after: 97496 KB, delta: 528 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 15043
+Number of Roads: 100000
+Number of Metro Cities: 9140
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 29517 microseconds, Memory usage before: 97496 KB, after: 98024 KB, delta: 528 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 15043
+Number of Roads: 100000
+Number of Metro Cities: 9140
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 28759 microseconds, Memory usage before: 98024 KB, after: 98024 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 18803
+Number of Roads: 100000
+Number of Metro Cities: 3207
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 36237 microseconds, Memory usage before: 98024 KB, after: 99344 KB, delta: 1320 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 18803
+Number of Roads: 100000
+Number of Metro Cities: 3207
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 35287 microseconds, Memory usage before: 99344 KB, after: 99344 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 23503
+Number of Roads: 100000
+Number of Metro Cities: 1529
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 42027 microseconds, Memory usage before: 99344 KB, after: 101192 KB, delta: 1848 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 23503
+Number of Roads: 100000
+Number of Metro Cities: 1529
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 40314 microseconds, Memory usage before: 101720 KB, after: 101720 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 29378
+Number of Roads: 100000
+Number of Metro Cities: 27877
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 48275 microseconds, Memory usage before: 101720 KB, after: 104020 KB, delta: 2300 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 29378
+Number of Roads: 100000
+Number of Metro Cities: 27877
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 48705 microseconds, Memory usage before: 104020 KB, after: 104020 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 36722
+Number of Roads: 100000
+Number of Metro Cities: 29687
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 56257 microseconds, Memory usage before: 104020 KB, after: 106548 KB, delta: 2528 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 36722
+Number of Roads: 100000
+Number of Metro Cities: 29687
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 56678 microseconds, Memory usage before: 106548 KB, after: 106572 KB, delta: 24 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 45902
+Number of Roads: 100000
+Number of Metro Cities: 13983
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 65516 microseconds, Memory usage before: 106572 KB, after: 110008 KB, delta: 3436 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 45902
+Number of Roads: 100000
+Number of Metro Cities: 13983
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 64343 microseconds, Memory usage before: 110008 KB, after: 110008 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 57377
+Number of Roads: 100000
+Number of Metro Cities: 5605
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 75559 microseconds, Memory usage before: 110008 KB, after: 114036 KB, delta: 4028 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 57377
+Number of Roads: 100000
+Number of Metro Cities: 5605
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 74932 microseconds, Memory usage before: 114036 KB, after: 114036 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 71721
+Number of Roads: 100000
+Number of Metro Cities: 49075
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 86991 microseconds, Memory usage before: 114036 KB, after: 119552 KB, delta: 5516 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 71721
+Number of Roads: 100000
+Number of Metro Cities: 49075
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 85624 microseconds, Memory usage before: 119552 KB, after: 119552 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 89651
+Number of Roads: 100000
+Number of Metro Cities: 39461
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 91933 microseconds, Memory usage before: 119552 KB, after: 126072 KB, delta: 6520 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 89651
+Number of Roads: 100000
+Number of Metro Cities: 39461
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 67570 microseconds, Memory usage before: 126072 KB, after: 126072 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 112063
+Number of Roads: 100000
+Number of Metro Cities: 13677
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 104412 microseconds, Memory usage before: 126072 KB, after: 135888 KB, delta: 9816 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 112063
+Number of Roads: 100000
+Number of Metro Cities: 13677
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 96927 microseconds, Memory usage before: 135888 KB, after: 135888 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 140078
+Number of Roads: 100000
+Number of Metro Cities: 24285
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 133473 microseconds, Memory usage before: 135888 KB, after: 152864 KB, delta: 16976 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 140078
+Number of Roads: 100000
+Number of Metro Cities: 24285
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 77224 microseconds, Memory usage before: 152864 KB, after: 152864 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 175097
+Number of Roads: 100000
+Number of Metro Cities: 116007
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 174180 microseconds, Memory usage before: 152864 KB, after: 170684 KB, delta: 17820 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 175097
+Number of Roads: 100000
+Number of Metro Cities: 116007
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 65603 microseconds, Memory usage before: 170684 KB, after: 170684 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 218871
+Number of Roads: 100000
+Number of Metro Cities: 93056
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 229145 microseconds, Memory usage before: 170684 KB, after: 192272 KB, delta: 21588 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 218871
+Number of Roads: 100000
+Number of Metro Cities: 93056
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 77966 microseconds, Memory usage before: 192272 KB, after: 192272 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 273588
+Number of Roads: 100000
+Number of Metro Cities: 149580
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 313472 microseconds, Memory usage before: 192272 KB, after: 225672 KB, delta: 33400 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 273588
+Number of Roads: 100000
+Number of Metro Cities: 149580
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 94206 microseconds, Memory usage before: 225672 KB, after: 225672 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 341985
+Number of Roads: 100000
+Number of Metro Cities: 10710
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 422024 microseconds, Memory usage before: 225672 KB, after: 259200 KB, delta: 33528 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 341985
+Number of Roads: 100000
+Number of Metro Cities: 10710
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 110627 microseconds, Memory usage before: 259200 KB, after: 259200 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 427481
+Number of Roads: 100000
+Number of Metro Cities: 401625
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 595723 microseconds, Memory usage before: 259200 KB, after: 302896 KB, delta: 43696 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 427481
+Number of Roads: 100000
+Number of Metro Cities: 401625
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 133823 microseconds, Memory usage before: 302896 KB, after: 302896 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 534351
+Number of Roads: 100000
+Number of Metro Cities: 495206
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 827750 microseconds, Memory usage before: 302896 KB, after: 368740 KB, delta: 65844 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 534351
+Number of Roads: 100000
+Number of Metro Cities: 495206
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 163389 microseconds, Memory usage before: 368740 KB, after: 368740 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 667938
+Number of Roads: 100000
+Number of Metro Cities: 615773
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 1147892 microseconds, Memory usage before: 368740 KB, after: 435556 KB, delta: 66816 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 667938
+Number of Roads: 100000
+Number of Metro Cities: 615773
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 198598 microseconds, Memory usage before: 435556 KB, after: 435556 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 834922
+Number of Roads: 100000
+Number of Metro Cities: 476291
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 1548060 microseconds, Memory usage before: 435556 KB, after: 517748 KB, delta: 82192 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 834922
+Number of Roads: 100000
+Number of Metro Cities: 476291
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 242162 microseconds, Memory usage before: 517748 KB, after: 517748 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 1043652
+Number of Roads: 100000
+Number of Metro Cities: 47206
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 2072388 microseconds, Memory usage before: 517748 KB, after: 619652 KB, delta: 101904 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 1043652
+Number of Roads: 100000
+Number of Metro Cities: 47206
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 296760 microseconds, Memory usage before: 619652 KB, after: 619652 KB, delta: 0 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 1304565
+Number of Roads: 100000
+Number of Metro Cities: 1101837
+Max Road Weight: 20000
+Ensure Connected: 1
+
+Function [sol_q3] took 2696506 microseconds, Memory usage before: 619652 KB, after: 779024 KB, delta: 159372 KB
+
+
+
+Parameters for Q3 Data Generation:
+Number of Cities: 1304565
+Number of Roads: 100000
+Number of Metro Cities: 1101837
+Max Road Weight: 20000
+Ensure Connected: 0
+
+Function [sol_q3] took 371350 microseconds, Memory usage before: 779024 KB, after: 779024 KB, delta: 0 KB

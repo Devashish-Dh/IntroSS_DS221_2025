@@ -1,0 +1,341 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 69.53      1.30     1.30        2     0.65     0.67  runDijkstraWithBoosters(int, std::vector<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >, std::allocator<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > >&, int, std::vector<bool, std::allocator<bool> > const&)
+ 17.65      1.63     0.33   999999     0.00     0.00  std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_get_insert_unique_pos(std::pair<int, int> const&)
+  4.28      1.71     0.08        1     0.08     1.48  sol_q3(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&)
+  2.14      1.75     0.04  1816554     0.00     0.00  void std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::_M_realloc_insert<std::pair<int, int> >(__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, std::pair<int, int>&&)
+  1.60      1.78     0.03  1999998     0.00     0.00  std::pair<int, int>& std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::emplace_back<std::pair<int, int> >(std::pair<int, int>&&)
+  1.07      1.80     0.02  4000097     0.00     0.00  State& std::vector<State, std::allocator<State> >::emplace_back<State>(State&&)
+  1.07      1.82     0.02        3     0.01     0.01  std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&)
+  0.53      1.83     0.01  3000102     0.00     0.00  std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+  0.53      1.84     0.01        1     0.01     1.86  q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.53      1.85     0.01        1     0.01     0.01  std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*)
+  0.53      1.86     0.01        1     0.01     0.01  void std::shuffle<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+  0.53      1.87     0.01                             std::pair<std::_Rb_tree_iterator<std::pair<int, int> >, bool> std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_insert_unique<std::pair<int, int> const&>(std::pair<int, int> const&)
+  0.00      1.87     0.00  1999998     0.00     0.00  int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&)
+  0.00      1.87     0.00   999999     0.00     0.00  unsigned long std::uniform_int_distribution<unsigned long>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<unsigned long>::param_type const&)
+  0.00      1.87     0.00   999999     0.00     0.00  std::vector<int, std::allocator<int> >& std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::emplace_back<std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >&&)
+  0.00      1.87     0.00       38     0.00     0.00  void std::vector<State, std::allocator<State> >::_M_realloc_insert<State>(__gnu_cxx::__normal_iterator<State*, std::vector<State, std::allocator<State> > >, State&&)
+  0.00      1.87     0.00       22     0.00     0.00  void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
+  0.00      1.87     0.00       21     0.00     0.00  void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_insert<std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> >*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> >&&)
+  0.00      1.87     0.00       19     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char const*, unsigned long, unsigned long) const
+  0.00      1.87     0.00       17     0.00     0.00  std::char_traits<char>::length(char const*)
+  0.00      1.87     0.00        8     0.00     0.00  frame_dummy
+  0.00      1.87     0.00        7     0.00     0.00  std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::push_back(std::vector<int, std::allocator<int> > const&)
+  0.00      1.87     0.00        5     0.00     0.00  std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::~vector()
+  0.00      1.87     0.00        4     0.00     0.00  void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_insert<std::vector<int, std::allocator<int> > const&>(__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> >*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> > const&)
+  0.00      1.87     0.00        2     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+  0.00      1.87     0.00        1     0.00     0.00  _GLOBAL__sub_I__Z16getMemoryUsageKBv
+  0.00      1.87     0.00        1     0.00     0.35  generateEdges()
+  0.00      1.87     0.00        1     0.00     1.86  question_three(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&)
+  0.00      1.87     0.00        1     0.00     1.48  decltype ({parm#3}({parm#4}...)) profileFunction<long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> >)
+  0.00      1.87     0.00        1     0.00     0.00  question3_reader(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&, std::vector<int, std::allocator<int> >&)
+  0.00      1.87     0.00        1     0.00     0.00  question3_writer(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)
+  0.00      1.87     0.00        1     0.00     0.01  generateMetroCities()
+  0.00      1.87     0.00        1     0.00     0.00  std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+  0.00      1.87     0.00        1     0.00     0.00  void std::__insertion_sort<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter)
+  0.00      1.87     0.00        1     0.00     0.00  void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) for 0.53% of 1.87 seconds
+
+index % time    self  children    called     name
+                0.01    1.85       1/1           question_three(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&) [2]
+[1]     99.5    0.01    1.85       1         q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [1]
+                0.00    1.48       1/1           decltype ({parm#3}({parm#4}...)) profileFunction<long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> >) [4]
+                0.00    0.35       1/1           generateEdges() [7]
+                0.00    0.01       1/1           generateMetroCities() [13]
+                0.01    0.00       1/3           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [12]
+                0.00    0.00       8/17          std::char_traits<char>::length(char const*) [32]
+                0.00    0.00       2/5           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::~vector() [34]
+                0.00    0.00       1/1           std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) [40]
+                0.00    0.00       1/2           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [36]
+-----------------------------------------------
+                0.00    1.86       1/1           question3(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [3]
+[2]     99.5    0.00    1.86       1         question_three(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&) [2]
+                0.01    1.85       1/1           q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [1]
+                0.00    0.00       1/2           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [36]
+-----------------------------------------------
+                                                 <spontaneous>
+[3]     99.5    0.00    1.86                 question3(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [3]
+                0.00    1.86       1/1           question_three(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&) [2]
+                0.00    0.00       1/1           question3_reader(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&, std::vector<int, std::allocator<int> >&) [38]
+                0.00    0.00       1/1           question3_writer(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) [39]
+-----------------------------------------------
+                0.00    1.48       1/1           q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [1]
+[4]     79.3    0.00    1.48       1         decltype ({parm#3}({parm#4}...)) profileFunction<long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> >) [4]
+                0.08    1.40       1/1           sol_q3(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&) [5]
+                0.00    0.00       9/17          std::char_traits<char>::length(char const*) [32]
+-----------------------------------------------
+                0.08    1.40       1/1           decltype ({parm#3}({parm#4}...)) profileFunction<long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> >) [4]
+[5]     79.3    0.08    1.40       1         sol_q3(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&) [5]
+                1.30    0.03       2/2           runDijkstraWithBoosters(int, std::vector<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >, std::allocator<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > >&, int, std::vector<bool, std::allocator<bool> > const&) [6]
+                0.03    0.04 1999998/1999998     std::pair<int, int>& std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::emplace_back<std::pair<int, int> >(std::pair<int, int>&&) [9]
+                0.00    0.00       1/5           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::~vector() [34]
+-----------------------------------------------
+                1.30    0.03       2/2           sol_q3(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&) [5]
+[6]     71.3    1.30    0.03       2         runDijkstraWithBoosters(int, std::vector<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >, std::allocator<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > >&, int, std::vector<bool, std::allocator<bool> > const&) [6]
+                0.02    0.00 4000097/4000097     State& std::vector<State, std::allocator<State> >::emplace_back<State>(State&&) [11]
+                0.01    0.00       2/3           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [12]
+                0.00    0.00       2/5           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::~vector() [34]
+-----------------------------------------------
+                0.00    0.35       1/1           q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [1]
+[7]     18.5    0.00    0.35       1         generateEdges() [7]
+                0.33    0.00  999999/999999      std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_get_insert_unique_pos(std::pair<int, int> const&) [8]
+                0.01    0.00       1/1           std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*) [16]
+                0.00    0.01 1999998/1999998     int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [18]
+                0.00    0.00  999999/999999      std::vector<int, std::allocator<int> >& std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::emplace_back<std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >&&) [27]
+-----------------------------------------------
+                0.33    0.00  999999/999999      generateEdges() [7]
+[8]     17.6    0.33    0.00  999999         std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_get_insert_unique_pos(std::pair<int, int> const&) [8]
+-----------------------------------------------
+                0.03    0.04 1999998/1999998     sol_q3(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&) [5]
+[9]      3.7    0.03    0.04 1999998         std::pair<int, int>& std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::emplace_back<std::pair<int, int> >(std::pair<int, int>&&) [9]
+                0.04    0.00 1816554/1816554     void std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::_M_realloc_insert<std::pair<int, int> >(__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, std::pair<int, int>&&) [10]
+-----------------------------------------------
+                0.04    0.00 1816554/1816554     std::pair<int, int>& std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::emplace_back<std::pair<int, int> >(std::pair<int, int>&&) [9]
+[10]     2.1    0.04    0.00 1816554         void std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::_M_realloc_insert<std::pair<int, int> >(__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, std::pair<int, int>&&) [10]
+-----------------------------------------------
+                0.02    0.00 4000097/4000097     runDijkstraWithBoosters(int, std::vector<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >, std::allocator<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > >&, int, std::vector<bool, std::allocator<bool> > const&) [6]
+[11]     1.1    0.02    0.00 4000097         State& std::vector<State, std::allocator<State> >::emplace_back<State>(State&&) [11]
+                0.00    0.00      38/38          void std::vector<State, std::allocator<State> >::_M_realloc_insert<State>(__gnu_cxx::__normal_iterator<State*, std::vector<State, std::allocator<State> > >, State&&) [28]
+-----------------------------------------------
+                0.01    0.00       1/3           q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [1]
+                0.01    0.00       2/3           runDijkstraWithBoosters(int, std::vector<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >, std::allocator<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > >&, int, std::vector<bool, std::allocator<bool> > const&) [6]
+[12]     1.1    0.02    0.00       3         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [12]
+-----------------------------------------------
+                0.00    0.01       1/1           q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [1]
+[13]     0.7    0.00    0.01       1         generateMetroCities() [13]
+                0.01    0.00       1/1           void std::shuffle<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&) [14]
+                0.00    0.00       1/1           void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter) [42]
+                0.00    0.00       1/1           void std::__insertion_sort<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter) [41]
+-----------------------------------------------
+                0.01    0.00       1/1           generateMetroCities() [13]
+[14]     0.7    0.01    0.00       1         void std::shuffle<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&) [14]
+                0.00    0.00  999999/999999      unsigned long std::uniform_int_distribution<unsigned long>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<unsigned long>::param_type const&) [19]
+-----------------------------------------------
+                0.00    0.00 1000045/3000102     unsigned long std::uniform_int_distribution<unsigned long>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<unsigned long>::param_type const&) [19]
+                0.01    0.00 2000057/3000102     int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [18]
+[15]     0.5    0.01    0.00 3000102         std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [15]
+-----------------------------------------------
+                              999999             std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*) [16]
+                0.01    0.00       1/1           generateEdges() [7]
+[16]     0.5    0.01    0.00       1+999999  std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*) [16]
+                              999999             std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*) [16]
+-----------------------------------------------
+                                                 <spontaneous>
+[17]     0.5    0.01    0.00                 std::pair<std::_Rb_tree_iterator<std::pair<int, int> >, bool> std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_insert_unique<std::pair<int, int> const&>(std::pair<int, int> const&) [17]
+-----------------------------------------------
+                0.00    0.01 1999998/1999998     generateEdges() [7]
+[18]     0.4    0.00    0.01 1999998         int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [18]
+                0.01    0.00 2000057/3000102     std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [15]
+-----------------------------------------------
+                0.00    0.00  999999/999999      void std::shuffle<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&) [14]
+[19]     0.2    0.00    0.00  999999         unsigned long std::uniform_int_distribution<unsigned long>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<unsigned long>::param_type const&) [19]
+                0.00    0.00 1000045/3000102     std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [15]
+-----------------------------------------------
+                0.00    0.00       2/8           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [103]
+                0.00    0.00       6/8           void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [36]
+[20]     0.0    0.00    0.00       8         frame_dummy [20]
+-----------------------------------------------
+                0.00    0.00  999999/999999      generateEdges() [7]
+[27]     0.0    0.00    0.00  999999         std::vector<int, std::allocator<int> >& std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::emplace_back<std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >&&) [27]
+                0.00    0.00      21/21          void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_insert<std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> >*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> >&&) [30]
+-----------------------------------------------
+                0.00    0.00      38/38          State& std::vector<State, std::allocator<State> >::emplace_back<State>(State&&) [11]
+[28]     0.0    0.00    0.00      38         void std::vector<State, std::allocator<State> >::_M_realloc_insert<State>(__gnu_cxx::__normal_iterator<State*, std::vector<State, std::allocator<State> > >, State&&) [28]
+-----------------------------------------------
+                0.00    0.00      22/22          question3_reader(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&, std::vector<int, std::allocator<int> >&) [38]
+[29]     0.0    0.00    0.00      22         void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [29]
+-----------------------------------------------
+                0.00    0.00      21/21          std::vector<int, std::allocator<int> >& std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::emplace_back<std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >&&) [27]
+[30]     0.0    0.00    0.00      21         void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_insert<std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> >*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> >&&) [30]
+-----------------------------------------------
+                0.00    0.00      19/19          question3_reader(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&, std::vector<int, std::allocator<int> >&) [38]
+[31]     0.0    0.00    0.00      19         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char const*, unsigned long, unsigned long) const [31]
+-----------------------------------------------
+                0.00    0.00       8/17          q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [1]
+                0.00    0.00       9/17          decltype ({parm#3}({parm#4}...)) profileFunction<long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> >) [4]
+[32]     0.0    0.00    0.00      17         std::char_traits<char>::length(char const*) [32]
+-----------------------------------------------
+                0.00    0.00       7/7           question3_reader(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&, std::vector<int, std::allocator<int> >&) [38]
+[33]     0.0    0.00    0.00       7         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::push_back(std::vector<int, std::allocator<int> > const&) [33]
+-----------------------------------------------
+                0.00    0.00       1/5           sol_q3(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&) [5]
+                0.00    0.00       2/5           runDijkstraWithBoosters(int, std::vector<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >, std::allocator<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > >&, int, std::vector<bool, std::allocator<bool> > const&) [6]
+                0.00    0.00       2/5           q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [1]
+[34]     0.0    0.00    0.00       5         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::~vector() [34]
+-----------------------------------------------
+                0.00    0.00       4/4           question3_reader(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&, std::vector<int, std::allocator<int> >&) [38]
+[35]     0.0    0.00    0.00       4         void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_insert<std::vector<int, std::allocator<int> > const&>(__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> >*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> > const&) [35]
+-----------------------------------------------
+                0.00    0.00       1/2           q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [1]
+                0.00    0.00       1/2           question_three(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&) [2]
+[36]     0.0    0.00    0.00       2         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [36]
+                0.00    0.00       6/8           frame_dummy [20]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [116]
+[37]     0.0    0.00    0.00       1         _GLOBAL__sub_I__Z16getMemoryUsageKBv [37]
+-----------------------------------------------
+                0.00    0.00       1/1           question3(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [3]
+[38]     0.0    0.00    0.00       1         question3_reader(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&, std::vector<int, std::allocator<int> >&) [38]
+                0.00    0.00      22/22          void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [29]
+                0.00    0.00      19/19          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char const*, unsigned long, unsigned long) const [31]
+                0.00    0.00       7/7           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::push_back(std::vector<int, std::allocator<int> > const&) [33]
+                0.00    0.00       4/4           void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_insert<std::vector<int, std::allocator<int> > const&>(__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> >*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> > const&) [35]
+-----------------------------------------------
+                0.00    0.00       1/1           question3(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [3]
+[39]     0.0    0.00    0.00       1         question3_writer(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) [39]
+-----------------------------------------------
+                0.00    0.00       1/1           q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [1]
+[40]     0.0    0.00    0.00       1         std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&) [40]
+-----------------------------------------------
+                0.00    0.00       1/1           generateMetroCities() [13]
+[41]     0.0    0.00    0.00       1         void std::__insertion_sort<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter) [41]
+-----------------------------------------------
+                                  52             void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter) [42]
+                0.00    0.00       1/1           generateMetroCities() [13]
+[42]     0.0    0.00    0.00       1+52      void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter) [42]
+                                  52             void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter) [42]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [37] _GLOBAL__sub_I__Z16getMemoryUsageKBv (main.cpp) [15] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [10] void std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::_M_realloc_insert<std::pair<int, int> >(__gnu_cxx::__normal_iterator<std::pair<int, int>*, std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > >, std::pair<int, int>&&)
+   [1] q3_testing(int, int, int, int, bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [18] int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [29] void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
+   [7] generateEdges()        [19] unsigned long std::uniform_int_distribution<unsigned long>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<unsigned long>::param_type const&) [40] std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+   [2] question_three(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&) [11] State& std::vector<State, std::allocator<State> >::emplace_back<State>(State&&) [36] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag)
+   [4] decltype ({parm#3}({parm#4}...)) profileFunction<long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, long long (*)(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&), std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >, std::vector<int, std::allocator<int> >) [28] void std::vector<State, std::allocator<State> >::_M_realloc_insert<State>(__gnu_cxx::__normal_iterator<State*, std::vector<State, std::allocator<State> > >, State&&) [17] std::pair<std::_Rb_tree_iterator<std::pair<int, int> >, bool> std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_insert_unique<std::pair<int, int> const&>(std::pair<int, int> const&)
+  [38] question3_reader(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&, std::vector<int, std::allocator<int> >&) [27] std::vector<int, std::allocator<int> >& std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::emplace_back<std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >&&) [8] std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_get_insert_unique_pos(std::pair<int, int> const&)
+  [39] question3_writer(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int) [35] void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_insert<std::vector<int, std::allocator<int> > const&>(__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> >*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> > const&) [16] std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*)
+  [13] generateMetroCities()  [30] void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_insert<std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<std::vector<int, std::allocator<int> >*, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >, std::vector<int, std::allocator<int> >&&) [41] void std::__insertion_sort<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter)
+   [6] runDijkstraWithBoosters(int, std::vector<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >, std::allocator<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > > > >&, int, std::vector<bool, std::allocator<bool> > const&) [33] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::push_back(std::vector<int, std::allocator<int> > const&) [42] void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter)
+   [5] sol_q3(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&) [12] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [14] void std::shuffle<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+  [31] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::find(char const*, unsigned long, unsigned long) const [34] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::~vector() [20] frame_dummy
+  [32] std::char_traits<char>::length(char const*) [9] std::pair<int, int>& std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >::emplace_back<std::pair<int, int> >(std::pair<int, int>&&)
